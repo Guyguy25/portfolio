@@ -1,0 +1,300 @@
+
+html, body{
+    height: 100%;
+    margin:0px;
+    padding: 0px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav{
+    /*background: #242424;*/
+    background: #fff;
+    border-bottom: 4px solid #b3b1b1a8;
+    height: 80px;
+    width: 100%;
+}
+
+.nav-title {
+    position: absolute;
+    margin: 11px 35px;
+    cursor: pointer;
+    color: #242629;
+    font-size: 30px;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 70px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #242629;
+    font-size: 25px;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+nav ul li a:hover {
+    color: gray;
+}
+
+#particles-js {
+    width: 100%;
+    min-height: calc(117vh - 470px);
+}
+
+#nav-icon {
+    bottom: 35px;
+    right: 20px;
+    float: right;
+    display: none;
+    width: 45px;
+    height: 35px;
+    position: relative;
+    margin: 50px auto;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+#nav-icon span {
+    display: none;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background: #f0efef;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+#nav-icon span:nth-child(1) {
+    top: 0px;
+}
+  
+#nav-icon span:nth-child(2),#nav-icon span:nth-child(3) {
+    top: 15px;
+}
+  
+#nav-icon span:nth-child(4) {
+    top: 30px;
+}
+  
+#nav-icon.open span:nth-child(1) {
+    top: 15px;
+    width: 0%;
+    left: 50%;
+}
+  
+#nav-icon.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+  
+#nav-icon.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+  
+#nav-icon.open span:nth-child(4) {
+    top: 15px;
+    width: 0%;
+    left: 50%;
+}
+
+.button-theme {
+    padding: 9px;
+    right: 21px;
+    top: 15px;
+    border-radius: 5px;
+    position: absolute;
+}
+
+.button-theme:hover {
+    background-color: #bbb;
+}
+
+.change-theme {
+    padding: 15px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='' viewBox='0 0 512 512' data-v-e8652fac='' fill='%23a3a3a3'%3E%3Cpath d='M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 1100px) {
+
+    nav {
+        z-index: 1002;
+        height: 80px;
+        position: fixed;
+    }
+    
+    #nav-icon {
+        bottom: 30px;
+        width: 45px;
+        display: block;
+        height: 46px;
+    }
+
+    #nav-icon span {
+        display: block;
+        height: 7px;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 300px;
+        height: 100vh;
+        background: #fff;
+        top: 80px;
+        left: -100%;
+        text-align: left;
+        transition: all .5s;
+    }
+    nav ul li {
+        border-bottom: 1px solid #000;
+        display: block;
+        margin: 0 0;
+        line-height: 50px;
+        padding: 10px 0 10px;
+        cursor: pointer;
+    }
+    nav ul li:hover {
+        background: red;
+    }
+    nav ul li a {
+        font-size: 20px;
+        padding: 0 50px;
+    }
+    #nav-icon.open ~ ul {
+        left: 0;
+    }
+
+    .overlay {
+        position: fixed;
+        z-index: 998;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgb(0, 0, 0);
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+    }
+    
+    .overlay.open {
+        opacity: .5;
+        visibility: visible;
+    }
+}
+
+@media (max-width: 858px) {
+
+    .nav-title {
+        margin: 5px 15px;
+    }
+
+    nav {
+        z-index: 1002;
+        height: 64px;
+        position: fixed;
+    }
+    
+    #nav-icon {
+        bottom: 37px;
+        right: 20px;
+        width: 40px;
+        display: block;
+        height: 46px;
+        z-index: 1002;
+    }
+
+    #nav-icon span {
+        display: block;
+        height: 7px;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 280px;
+        height: 100vh;
+        background: #fff;
+        top: 64px;
+        left: -100%;
+        text-align: left;
+        transition: all .5s;
+    }
+    nav ul li {
+        border-bottom: 1px solid #000;
+        display: block;
+        margin: 0 0;
+        line-height: 50px;
+        padding: 10px 0 10px;
+        cursor: pointer;
+    }
+    nav ul li:hover {
+        background: #626262;
+    }
+    nav ul li a {
+        font-size: 20px;
+        padding: 0 30px;
+    }
+    #nav-icon.open ~ ul {
+        left: 0;
+    }
+
+    .overlay {
+        position: fixed;
+        z-index: 998;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgb(0, 0, 0);
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+    }
+    
+    .overlay.open {
+        opacity: .5;
+        visibility: visible;
+    }
+}
