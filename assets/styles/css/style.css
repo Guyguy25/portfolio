@@ -225,9 +225,6 @@ nav ul li a:hover {
   position: absolute;
 }
 
-.langues:hover {
-  display: block;
-}
 
 .langues > span {
   display: flex;
@@ -359,6 +356,7 @@ main {
   }
 
   .langues {
+    top: unset;
     margin-left: 30px;
     position: relative;
     height: 60px;
