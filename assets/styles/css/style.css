@@ -204,7 +204,7 @@ nav ul li a:hover {
   transition: background-image 0.3s ease-in-out;
 }
 
-.languages:hover .langues {
+.languages:hover > .langues {
   display: block;
 }
 
@@ -218,13 +218,17 @@ nav ul li a:hover {
   border-radius: 10px;
 }
 
+.langues > span {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
 .langues > svg {
   top: 5px;
   height: 20px;
   width: 20px;
   position: absolute;
 }
-
 
 .langues > span {
   display: flex;

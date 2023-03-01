@@ -13,6 +13,7 @@ $(".button-theme").click(function () {
   }
 });
 
+
 html.classList.add(localStorage.getItem("theme"));
 
 if(!localStorage.getItem("theme")) {
