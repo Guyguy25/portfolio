@@ -9,7 +9,7 @@
 html,
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   height: 100%;
   margin: 0px;
   padding: 0px;
@@ -44,7 +44,6 @@ html.dark > body > header > nav > ul > li > a {
 }
 
 /* Light mode */
-
 
 html.light > body {
   background-color: #bbb;
@@ -213,13 +212,14 @@ nav ul li a:hover {
   top: 50px;
   display: none;
   height: 60px;
-  width: 160px;
+  width: 120px;
   background: red;
   border-radius: 10px;
 }
 
 .langues > span {
   cursor: pointer;
+  font-size: 0.8em;
   pointer-events: auto;
 }
 
@@ -234,6 +234,15 @@ nav ul li a:hover {
   display: flex;
   line-height: 30px;
   margin-left: 20px;
+}
+
+.languages > svg {
+  position: absolute;
+  top: 27px;
+  right: 185px;
+  height: 20px;
+  fill: #bbb;
+  width: 20px;
 }
 
 /* Style main */
@@ -358,13 +367,22 @@ main {
     padding: 10px 0 10px;
     cursor: pointer;
   }
-  
+
   nav ul li a {
     padding: 0 30px;
   }
 
   .languages {
     padding: 10px 0px;
+  }
+
+  .languages > svg {
+    position: relative;
+    top: 3px;
+    right: 30px;
+    height: 20px;
+    fill: #bbb;
+    width: 20px;
   }
 
   .languages:hover > .langues {
@@ -377,6 +395,10 @@ main {
 
   .languages > span {
     padding: 0 30px;
+  }
+
+  .langues > span {
+    font-size: unset;
   }
 
   .langues {
@@ -409,8 +431,8 @@ main {
   .langues.en::before {
     position: absolute;
     top: 30px;
-    left: 10px;
-    content: '';
+    left: 20px;
+    content: "";
     width: 70px;
     height: 3px;
     background-color: rgb(123, 123, 199);
@@ -419,8 +441,8 @@ main {
   .langues.fr::before {
     position: absolute;
     top: 60px;
-    left: 10px;
-    content: '';
+    left: 20px;
+    content: "";
     width: 80px;
     height: 3px;
     background-color: rgb(123, 123, 199);
@@ -428,32 +450,32 @@ main {
 
   .langues > span::before {
     position: absolute;
-    left: 10px;
-    content: '';
+    left: 20px;
+    content: "";
     width: 0px;
     height: 3px;
-    transition: width .5s linear;
+    transition: width 0.5s linear;
     background-color: rgb(123, 123, 199);
   }
 
   .langues > .fr::before {
     position: absolute;
     top: 60px;
-    left: 10px;
-    content: '';
+    left: 20px;
+    content: "";
     width: 0px;
     height: 3px;
-    transition: width .5s linear;
+    transition: width 0.5s linear;
   }
 
   .langues > .en::before {
     position: absolute;
     top: 30px;
-    left: 10px;
-    content: '';
+    left: 20px;
+    content: "";
     width: 0px;
     height: 3px;
-    transition: width .5s linear;
+    transition: width 0.5s linear;
   }
 
   .langues > .fr:hover::before {
@@ -479,7 +501,7 @@ main {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgb(0, 0, 0, 0.500);
+    background-color: rgb(0, 0, 0, 0.5);
     visibility: hidden;
     opacity: 0;
   }
