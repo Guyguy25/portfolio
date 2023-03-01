@@ -8,7 +8,7 @@
 
 html,
 body {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   transition: background 0.3s ease-in-out;
   height: 100%;
   margin: 0px;
@@ -43,6 +43,10 @@ html.dark > body > header > nav > ul > li > a {
   color: #fff;
 }
 
+html.dark > body > main > .content > .card {
+  background-color: #242424;
+}
+
 /* Light mode */
 
 html.light > body {
@@ -71,9 +75,14 @@ html.light > body > header > nav > ul > li > a {
   color: #242629;
 }
 
+html.light > body > main > .content > .card {
+  background-color: #fff;
+}
+
 /* Style nav */
 
 nav {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   position: fixed;
   transition: background 0.3s ease-in-out;
   height: 80px;
@@ -209,22 +218,24 @@ nav ul li a:hover {
 
 .langues {
   position: absolute;
-  top: 50px;
+  top: 55px;
   display: none;
-  height: 60px;
+  height: 65px;
   width: 120px;
-  background: red;
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.29);
   border-radius: 10px;
 }
 
 .langues > span {
   cursor: pointer;
   font-size: 0.8em;
-  pointer-events: auto;
+  left: 15px;
 }
 
 .langues > svg {
   top: 5px;
+  left: 7px;
   height: 20px;
   width: 20px;
   position: absolute;
@@ -233,7 +244,11 @@ nav ul li a:hover {
 .langues > span {
   display: flex;
   line-height: 30px;
-  margin-left: 20px;
+  margin-left: 30px;
+}
+
+.langues > .fr {
+  line-height: 25px;
 }
 
 .languages > svg {
@@ -245,33 +260,139 @@ nav ul li a:hover {
   width: 20px;
 }
 
+.langues.fr {
+  position: absolute;
+  right: 185px;
+  display: none;
+  height: 65px;
+  width: 115px;
+  border-radius: 10px;
+}
+
+.langues.en::before {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  content: "";
+  width: 70px;
+  height: 3px;
+  background-color: rgb(123, 123, 199);
+}
+
+.langues.fr::before {
+  position: absolute;
+  top: 58px;
+  left: 30px;
+  content: "";
+  width: 78px;
+  height: 3px;
+  background-color: rgb(123, 123, 199);
+}
+
+.langues > span::before {
+  position: absolute;
+  left: 30px;
+  content: "";
+  width: 0px;
+  height: 3px;
+  transition: width 0.5s linear;
+  background-color: rgb(123, 123, 199);
+}
+
+.langues > .fr::before {
+  position: absolute;
+  top: 58px;
+  left: 30px;
+  content: "";
+  width: 0px;
+  height: 3px;
+  transition: width 0.3s linear;
+}
+
+.langues > .en::before {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  content: "";
+  width: 0px;
+  height: 3px;
+  transition: width 0.3s linear;
+}
+
+.langues > .fr:hover::before {
+  width: 78px;
+}
+
+.langues > .en:hover::before {
+  width: 70px;
+}
+
+.langues.fr > svg {
+  top: 35px;
+}
+
 /* Style main */
 
-main {
-  z-index: 0;
+.page {
+  z-index: -1;
   position: relative;
-  top: 80px;
+  padding: 10rem 10% 0;
 }
 
-.pdp {
-  margin-left: auto;
+/* Card */
+
+.card {
+  border-radius: 0.8rem;
   margin-right: auto;
-  width: 250px;
+  margin-left: auto;
+  height: auto;
+  width: 90%;
+  max-width: 1500px;
 }
 
-.pdp > img {
-  height: 250px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+.card > .top {
+  display: flex;
+  justify-content: center;
+  transform: translateY(-30%);
+}
+
+.card > .top > img {
   border-radius: 50%;
-  margin-left: auto;
-  margin-right: auto;
+  height: 12rem;
+  width: 12rem;
+  transition: 0.3s;
 }
 
-.test {
+.card > .top > img:hover {
+  transform: translateY(-10%);
+}
+
+.card > .bottom {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  max-width: 1000px;
+  transform: translateY(-20%);
+}
+
+.card > .bottom > .tag-name {
+  margin-bottom: 0.25rem;
+}
+
+.card > .bottom > .location {
+  color: #8a8a8a;
+  margin-bottom: 1.5rem;
+}
+
+.description {
   z-index: -1;
   text-align: center;
-  font-size: 1.7em;
+  padding: 0 15%;
+  font-size: 1.2em;
+  font-weight: normal;
 }
 
 @media (max-width: 800px) {
@@ -323,10 +444,6 @@ main {
 
   .button-theme {
     top: 7px;
-  }
-
-  main {
-    top: 65px;
   }
 
   .nav-title {
@@ -393,12 +510,17 @@ main {
     display: block;
   }
 
-  .languages > span {
-    padding: 0 30px;
+  .langues.fr {
+    position: relative;
+    top: unset;
+    right: unset;
+    height: unset;
+    width: unset;
+    border-radius: unset;
   }
 
-  .langues > span {
-    font-size: unset;
+  .languages > span {
+    padding: 0 30px;
   }
 
   .langues {
@@ -412,9 +534,13 @@ main {
   }
 
   .langues > span {
-    display: flex;
+    font-size: unset;
     line-height: 30px;
     margin-left: 20px;
+  }
+
+  .langues > .fr {
+    line-height: 30px;
   }
 
   .langues > span:hover {
@@ -422,6 +548,7 @@ main {
   }
 
   .langues > svg {
+    left: unset;
     top: 5px;
     height: 20px;
     width: 20px;
@@ -487,7 +614,7 @@ main {
   }
 
   .langues.fr > svg {
-    top: 35px;
+    top: 37px;
   }
 
   #nav-icon.open ~ ul {

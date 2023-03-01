@@ -104,16 +104,16 @@ if (!localStorage.getItem("languages")) {
   langues.classList.value = "langues en";
 } else {
   if (localStorage.getItem("languages") == "fr") {
-    document.querySelector(".test").innerHTML =
+    document.querySelector(".description").innerHTML =
       "Salut, je suis un developpeur Français jeune et passionné. Je suis principalement spécialisé dans le developpement web mais je touche à tout.";
     document.querySelectorAll("nav > ul > li > a")[0].innerHTML = "Accueil";
-    document.querySelectorAll("nav > ul > li > a")[1].innerHTML = "Soutenir";
+    document.querySelectorAll("nav > ul > li > a")[1].innerHTML = "Contacter";
     document.querySelector("nav > ul > li > span").innerHTML = "Langue";
   } else {
-    document.querySelector(".test").innerHTML =
-      "Hi, I'm French developer full stack";
+    document.querySelector(".description").innerHTML =
+      "Hi, I'm a young and passionate French developer. I'm mainly specialized in web development but I touch everything.";
     document.querySelectorAll("nav > ul > li > a")[0].innerHTML = "Home";
-    document.querySelectorAll("nav > ul > li > a")[1].innerHTML = "Support";
+    document.querySelectorAll("nav > ul > li > a")[1].innerHTML = "Contact";
     document.querySelector("nav > ul > li > span").innerHTML = "Language";
   }
 }
