@@ -46,7 +46,7 @@ setInterval(toggleRedirect, 1);
 // Light/dark theme
 html = document.querySelector("html");
 
-$(".button-theme").click(function () {
+document.querySelector(".button-theme").addEventListener("click", function () {
   if (html.classList.contains("dark")) {
     html.classList.remove("dark");
     html.classList.add("light");
