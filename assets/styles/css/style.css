@@ -47,7 +47,7 @@ html.dark > body > header > nav > ul > li > a {
 
 
 html.light > body {
-  background-color: #fff;
+  background-color: #bbb;
   color: black;
 }
 
@@ -240,6 +240,27 @@ main {
   top: 80px;
 }
 
+.pdp {
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+}
+
+.pdp > img {
+  height: 250px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.test {
+  z-index: -1;
+  text-align: center;
+  font-size: 1.7em;
+}
+
 @media (max-width: 800px) {
   /* Light mode */
 
@@ -272,7 +293,7 @@ main {
 
   html.dark > body > header > nav > ul {
     background: #242424;
-    transition: background 0.3s ease-in-out;
+    transition: background 0.4s, left 0.3s ease-in-out;
   }
 
   html.dark > body > header > nav > ul > li {
@@ -324,7 +345,6 @@ main {
     top: 64px;
     left: -100%;
     text-align: left;
-    transition: left 0.5s;
   }
   nav ul li {
     display: block;
@@ -464,9 +484,5 @@ main {
     transition: all 0.5s ease-in-out;
     opacity: 0.5;
     visibility: visible;
-  }
-
-  .test {
-    z-index: -1;
   }
 }

@@ -58,9 +58,16 @@ if(!localStorage.getItem("languages")) {
   
 }else {
   if(localStorage.getItem("languages") == "fr") {
-    document.querySelector(".test").innerHTML = "Salut, je suis un developpeur français full stack."
+
+    document.querySelector(".test").innerHTML = "Salut, je suis un developpeur Français jeune et passionné. Je suis principalement spécialisé dans le developpement web mais je touche à tout."
+    document.querySelectorAll("nav > ul > li > a")[0].innerHTML = "Accueil"
+    document.querySelectorAll("nav > ul > li > a")[1].innerHTML = "Soutenir"
+    document.querySelector("nav > ul > li > span").innerHTML = "Langue"
   } else {
-    document.querySelector(".test").innerHTML = "French developer and I'm full stack"
+    document.querySelector(".test").innerHTML = "Hi, I'm French developer full stack"
+    document.querySelectorAll("nav > ul > li > a")[0].innerHTML = "Home"
+    document.querySelectorAll("nav > ul > li > a")[1].innerHTML = "Support"
+    document.querySelector("nav > ul > li > span").innerHTML = "Language"
   }
 }
 
