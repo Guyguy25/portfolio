@@ -406,6 +406,12 @@ li.languages {
 }
 
 @media (max-width: 800px) {
+
+  html.dark > body > header > nav > ul > .languages > .langues,
+  html.light > body > header > nav > ul > .languages > .langues {
+    background: none;
+  }
+
   /* Light mode */
 
   html.light > body > header > nav > ul {
@@ -500,6 +506,10 @@ li.languages {
   }
 
   .languages {
+    padding: 10px 0px;
+  }
+
+  li.languages {
     padding: 10px 0px;
   }
 
