@@ -60,8 +60,9 @@ document.querySelector(".button-theme").addEventListener("click", function () {
 
 html.classList.add(localStorage.getItem("theme"));
 
+// Set default theme in dark
 if (!localStorage.getItem("theme")) {
-  html.classList.value = "light";
+  html.classList.value = "dark";
 }
 
 // Language traductor système
