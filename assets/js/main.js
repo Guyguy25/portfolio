@@ -21,21 +21,22 @@ setInterval(RemoveOpen, 1);
 
 async function toggleRedirect() {
   if (window.innerWidth <= 800) {
-    document
-      .querySelectorAll("nav > ul li")[0]
-      .setAttribute("onclick", "location.href=`/portfolio`");
-    document
-      .querySelectorAll("nav > ul li")[1]
-      .setAttribute("onclick", "location.href=`/portfolio/support`");
-    document
-      .querySelectorAll("nav > ul li")[3]
-      .setAttribute("onclick", "location.href=`https://github.com/guyguy25`");
+    home_li = document.querySelectorAll("nav > ul li")[0];
+    about_li = document.querySelectorAll("nav > ul li")[1];
+    github_li = document.querySelectorAll("nav > ul li")[3];
+
+    home_li.setAttribute("onclick", "location.href=`/portfolio`");
+    about_li.setAttribute("onclick", "location.href=`/portfolio/support`");
+    github_li.setAttribute(
+      "onclick",
+      "location.href=`https://github.com/guyguy25`"
+    );
   }
   if (window.innerWidth >= 800) {
     if (document.querySelector("nav > ul > li").hasAttribute("onclick")) {
-      document.querySelectorAll("nav > ul li")[0].removeAttribute("onclick");
-      document.querySelectorAll("nav > ul li")[1].removeAttribute("onclick");
-      document.querySelectorAll("nav > ul li")[3].removeAttribute("onclick");
+      home_li.removeAttribute("onclick");
+      about_li.removeAttribute("onclick");
+      github_li.removeAttribute("onclick");
     }
   }
 }
@@ -108,13 +109,13 @@ if (!localStorage.getItem("languages")) {
     document.querySelector(".description").innerHTML =
       "Salut, je suis un developpeur Français jeune et passionné. Je suis principalement spécialisé dans le developpement web mais je touche à tout.";
     document.querySelectorAll("nav > ul > li > a")[0].innerHTML = "Accueil";
-    document.querySelectorAll("nav > ul > li > a")[1].innerHTML = "Contacter";
+    document.querySelectorAll("nav > ul > li > a")[1].innerHTML = "À propos";
     document.querySelector("nav > ul > li > span").innerHTML = "Langue";
   } else {
     document.querySelector(".description").innerHTML =
       "Hi, I'm a young and passionate French developer. I'm mainly specialized in web development but I touch everything.";
     document.querySelectorAll("nav > ul > li > a")[0].innerHTML = "Home";
-    document.querySelectorAll("nav > ul > li > a")[1].innerHTML = "Contact";
+    document.querySelectorAll("nav > ul > li > a")[1].innerHTML = "About";
     document.querySelector("nav > ul > li > span").innerHTML = "Language";
   }
 }
