@@ -18,14 +18,19 @@ body {
 /* Dark mode */
 
 html.dark > body {
-  background-color: #494848;
+  background-color: #121212;
   color: white;
 }
 
 html.dark > body > header > nav {
   z-index: 15;
+  background: #24242400;
+  /* border-bottom: 4px solid #fff; */
+  box-shadow: 0px 0px 9px 3px rgba(255, 255, 255, 0.279)
+}
+
+html.dark > body > header > nav.open {
   background: #242424;
-  border-bottom: 4px solid #fff;
 }
 
 html.dark > body > header > nav > #nav-icon > span {
@@ -37,6 +42,10 @@ html.dark > body > header > nav > .nav-title {
 }
 
 html.dark > body > header > nav > .button-theme .change-theme {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='' viewBox='0 0 512 512' fill='%23fff' data-v-e8652fac=''%3E%3Cpath d='M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+html.dark > body > header > nav > .button-theme .change-theme:hover {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='' viewBox='0 0 512 512' fill='%23a3a3a3' data-v-e8652fac=''%3E%3Cpath d='M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z'%3E%3C/path%3E%3C/svg%3E");
 }
 
@@ -74,8 +83,13 @@ html.light > body {
 
 html.light > body > header > nav {
   z-index: 15;
-  background: #fff;
-  border-bottom: 4px solid #b3b1b1a8;
+  background: #ffffff00;
+  /* border-bottom: 4px solid #b3b1b1a8; */
+  box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.279)
+}
+
+html.light > body > header > nav.open {
+  background: rgb(255, 255, 255);
 }
 
 html.light > body > header > nav > #nav-icon > span {
@@ -87,6 +101,10 @@ html.light > body > header > nav > .nav-title {
 }
 
 html.light > body > header > nav > .button-theme .change-theme {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='' viewBox='0 0 512 512' data-v-e8652fac='' fill='%23242629;'%3E%3Cpath d='M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+html.light > body > header > nav > .button-theme .change-theme:hover {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='' viewBox='0 0 512 512' data-v-e8652fac='' fill='%23a3a3a3'%3E%3Cpath d='M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
@@ -132,14 +150,14 @@ nav {
 
 nav ul {
   float: right;
-  margin-right: 80px;
+  margin-right: 20px;
 }
 
 nav ul li {
   display: inline-block;
   line-height: 75px;
   font-size: 25px;
-  margin: 0 5px;
+  margin: 0 15px;
   padding: 0px 13px;
 }
 
@@ -226,14 +244,34 @@ nav ul li a:hover {
 }
 
 .button-theme {
+  position: relative;
+  float: right;
+  margin-right: 70px;
+  height: 75px;
+}
+
+.change-theme {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 15px;
+  background-repeat: no-repeat;
+  transition: background-image 0.3s ease-in-out;
+}
+
+.button-theme:hover .change-theme {
+  fill: red;
+}
+
+/* .button-theme {
   padding: 9px;
   right: 21px;
   top: 13px;
   border-radius: 5px;
   position: absolute;
-}
+} */
 
-.button-theme:hover {
+/* .button-theme:hover {
   background-color: #bbb;
 }
 
@@ -241,14 +279,10 @@ nav ul li a:hover {
   padding: 15px;
   background-repeat: no-repeat;
   transition: background-image 0.3s ease-in-out;
-}
+} */
 
 .languages:hover > .langues {
   display: block;
-}
-
-li.languages {
-  padding: 0px 0px 0px 13px;
 }
 
 .langues {
@@ -295,7 +329,7 @@ li.languages {
 
 .langues.fr {
   position: absolute;
-  right: 185px;
+  right: 235px;
   display: none;
   height: 65px;
   width: 115px;
@@ -365,7 +399,7 @@ li.languages {
 }
 
 .active {
-  background: rgb(185, 185, 185);
+  background: rgb(211 211 211 / 48%);
   padding: 5px;
   border-radius: 5px;
 }
@@ -461,7 +495,7 @@ li.languages {
   max-width: 1000px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 870px) {
   html.dark > body > header > nav > ul > .languages > .langues,
   html.light > body > header > nav > ul > .languages > .langues {
     background: none;
@@ -518,7 +552,7 @@ li.languages {
   }
 
   .button-theme {
-    top: 7px;
+    height: 65px;
   }
 
   .nav-title {
@@ -737,7 +771,7 @@ li.languages {
   }
 }
 
-@media (max-height: 890px) {
+@media (max-height: 900px) {
   .content > .links {
     margin-top: 12rem;
   }
@@ -745,7 +779,7 @@ li.languages {
 
 @media (max-height: 800px) {
   .content > .links {
-    margin-top: 6rem;
+    margin-top: 3rem;
   }
 }
 

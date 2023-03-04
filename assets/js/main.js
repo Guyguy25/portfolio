@@ -110,12 +110,14 @@ if (!localStorage.getItem("languages")) {
       "Salut, je suis un developpeur Français jeune et passionné. Je suis principalement spécialisé dans le developpement web mais je touche à tout.";
     document.querySelectorAll("nav > ul > li > a")[0].innerHTML = "Accueil";
     document.querySelectorAll("nav > ul > li > a")[1].innerHTML = "À propos";
+    document.querySelectorAll("nav > ul > li > a")[2].innerHTML = "Contacter";
     document.querySelector("nav > ul > li > span").innerHTML = "Langue";
   } else {
     document.querySelector(".description").innerHTML =
       "Hi, I'm a young and passionate French developer. I'm mainly specialized in web development but I touch everything.";
     document.querySelectorAll("nav > ul > li > a")[0].innerHTML = "Home";
     document.querySelectorAll("nav > ul > li > a")[1].innerHTML = "About";
+    document.querySelectorAll("nav > ul > li > a")[2].innerHTML = "Contact";
     document.querySelector("nav > ul > li > span").innerHTML = "Language";
   }
 }
@@ -124,5 +126,6 @@ if (!localStorage.getItem("languages")) {
 
 document.querySelector("#nav-icon").addEventListener("click", function () {
   document.querySelector("#nav-icon").classList.toggle("open");
+  document.querySelector("nav").classList.toggle("open");
   document.querySelector(".overlay").classList.toggle("open");
 });
