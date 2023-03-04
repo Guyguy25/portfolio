@@ -23,6 +23,7 @@ html.dark > body {
 }
 
 html.dark > body > header > nav {
+  z-index: 15;
   background: #242424;
   border-bottom: 4px solid #fff;
 }
@@ -72,6 +73,7 @@ html.light > body {
 }
 
 html.light > body > header > nav {
+  z-index: 15;
   background: #fff;
   border-bottom: 4px solid #b3b1b1a8;
 }
