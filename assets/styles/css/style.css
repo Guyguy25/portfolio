@@ -43,6 +43,10 @@ html.dark > body > header > nav > ul > li > a {
   color: #fff;
 }
 
+html.dark > body > header > nav > ul > li > .active {
+  color: #000;
+}
+
 html.dark > body > header > nav > ul > .languages > .langues {
   background: rgb(100, 100, 100);
 }
@@ -50,6 +54,15 @@ html.dark > body > header > nav > ul > .languages > .langues {
 html.dark > body > main > .content > .card {
   background-color: #242424;
 }
+
+html.dark > body > main > .content > .links > .link {
+  background-color: #242424;
+}
+
+html.dark > body > main > .content > .links > .link > a > .svg-link {
+  fill: white;
+}
+
 
 /* Light mode */
 
@@ -85,6 +98,14 @@ html.light > body > header > nav > ul > .languages > .langues {
 
 html.light > body > main > .content > .card {
   background-color: #fff;
+}
+
+html.light > body > main > .content > .links > .link {
+  background-color: #ffffff;
+}
+
+html.light > body > main > .content > .links > .link > a > .svg-link {
+  fill: #000000;
 }
 
 /* Style nav */
@@ -341,17 +362,23 @@ li.languages {
   top: 35px;
 }
 
+.active {
+  background: rgb(185, 185, 185);
+  padding: 5px;
+  border-radius: 5px;
+}
+
 /* Style main */
 
 .page {
-  z-index: -1;
   position: relative;
-  padding: 10rem 10% 0;
+  padding: 15rem 10% 0;
 }
 
 /* Card */
 
 .card {
+  transition: background-color 0.3s ease-in-out;
   border-radius: 0.8rem;
   margin-right: auto;
   margin-left: auto;
@@ -405,6 +432,33 @@ li.languages {
   font-weight: normal;
 }
 
+/* Links */
+
+.svg-link {
+  display: flex;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+}
+
+.link {
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.content > .links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6rem;
+  /* width: 20%; */
+  width: calc(100% - 60%);
+  max-width: 1000px;
+}
+
 @media (max-width: 800px) {
   html.dark > body > header > nav > ul > .languages > .langues,
   html.light > body > header > nav > ul > .languages > .langues {
@@ -454,6 +508,10 @@ li.languages {
   }
 
   html.dark > body > header > nav > ul > .languages > span {
+    color: #fff;
+  }
+
+  html.dark > body > header > nav > ul > li > .active {
     color: #fff;
   }
 
@@ -654,4 +712,51 @@ li.languages {
     opacity: 0.5;
     visibility: visible;
   }
+
+  .page {
+    position: relative;
+    padding: 10rem 10% 0;
+  }
+
+  .content > .links {
+    width: 80%;
+  }
+
+  .active {
+    background: none;
+    padding: 0 30px;
+    border-radius: unset;
+  }
+}
+
+@media (max-height: 950px) {
+  .content > .links {
+    margin-top: 17rem;
+  }
+}
+
+@media (max-height: 890px) {
+  .content > .links {
+    margin-top: 12rem;
+  }
+}
+
+@media (max-height: 800px) {
+  .content > .links {
+    margin-top: 6rem;
+  }
+}
+
+@media (max-height: 700px) {
+  .content > .links {
+    margin-top: 2rem;
+  }
+}
+
+/* About.html style */
+
+.page-about {
+  z-index: -1;
+  position: relative;
+  padding: 10rem 10% 0;
 }
