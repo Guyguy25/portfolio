@@ -1,48 +1,128 @@
-// Removing class open when the window is larger than 800px width
+home_li = document.querySelectorAll("nav > ul li")[0];
+home_a = document.querySelectorAll("nav > ul li a")[0];
+about_li = document.querySelectorAll("nav > ul li")[1];
+about_a = document.querySelectorAll("nav > ul li a")[1];
+contact_li = document.querySelectorAll("nav > ul li")[2];
+contact_a = document.querySelectorAll("nav > ul li a")[2];
+main = document.querySelector("main");
 
-async function RemoveOpen() {
+// Scroll Système
+
+if(main.scrollTop == 0) {
+  if(!home_a.classList.contains("active")) {
+    home_a.classList.add("active")
+  }
+}
+
+main.addEventListener("scroll", () => {
+  if(main.scrollTop <= 900){
+    if(!home_a.classList.contains("active")) {
+      home_a.classList.add("active")
+    }
+    if(about_a.classList.contains("active")) {
+      about_a.classList.remove("active")
+    }
+    if(contact_a.classList.contains("active")) {
+      contact_a.classList.remove("active")
+    }
+  }
+  if(main.scrollTop >= 1000){
+    if(!about_a.classList.contains("active")) {
+      about_a.classList.add("active")
+    }
+    if(home_a.classList.contains("active")) {
+      home_a.classList.remove("active")
+    }
+    if(contact_a.classList.contains("active")) {
+      contact_a.classList.remove("active")
+    }
+  }
+  if(main.scrollTop >= 1700){
+    if(!contact_a.classList.contains("active")) {
+      contact_a.classList.add("active")
+    }
+    if(home_a.classList.contains("active")) {
+      home_a.classList.remove("active")
+    }
+    if(about_a.classList.contains("active")) {
+      about_a.classList.remove("active")
+    }
+  }
+})
+
+home_li.addEventListener('click', function () {
+  main.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+  if(!home_a.classList.contains("active")) {
+    home_a.classList.add("active");
+  };
+  if(about_a.classList.contains("active")) {
+    about_a.classList.remove("active");
+  };
+  if(contact_a.classList.contains("active")) {
+    contact_a.classList.remove("active");
+  };
+})
+
+about_li.addEventListener('click', function () {
+  main.scrollTo({
+    top: 1000,
+    behavior: 'smooth',
+  });
+  if(!about_a.classList.contains("active")) {
+    about_a.classList.add("active");
+  };
+  if(home_a.classList.contains("active")) {
+    home_a.classList.remove("active");
+  };
+  if(contact_a.classList.contains("active")) {
+    contact_a.classList.remove("active");
+  };
+})
+
+contact_li.addEventListener('click', function () {
+  main.scrollTo({
+    top: 1700,
+    behavior: 'smooth',
+  });
+  if(!contact_a.classList.contains("active")) {
+    contact_a.classList.add("active");
+  };
+  if(home_a.classList.contains("active")) {
+    home_a.classList.remove("active");
+  };
+  if(about_a.classList.contains("active")) {
+    about_a.classList.remove("active");
+  };
+})
+
+// Removing class open when the window is larger than 870px width
+
+function RemoveOpen() {
   if (document.querySelector("#nav-icon").classList.contains("open")) {
-    if (window.innerWidth >= 800) {
+    if (window.innerWidth >= 870) {
       document.querySelector("#nav-icon").classList.remove("open");
+      document.querySelector("nav").classList.remove("open");
       document.querySelector(".overlay").classList.remove("open");
     }
   }
+
+  if (!document.querySelector("nav").classList.contains("open")) {
+    document.querySelector(".languages").classList.remove("open")
+  }
+
   if (document.querySelector(".languages").classList.contains("open")) {
-    if (window.innerWidth >= 800) {
+    if (window.innerWidth >= 870) {
       document.querySelector(".languages").classList.remove("open");
     }
   }
 }
 
-// Check if it is under 800px width or not with an interval of 0.001 second
+// Check if it is under 870px width or not with an interval of 0.001 second
 setInterval(RemoveOpen, 1);
 
-// Removing class open when the window is larger than 800px width
-
-async function toggleRedirect() {
-  if (window.innerWidth <= 800) {
-    home_li = document.querySelectorAll("nav > ul li")[0];
-    about_li = document.querySelectorAll("nav > ul li")[1];
-    github_li = document.querySelectorAll("nav > ul li")[3];
-
-    home_li.setAttribute("onclick", "location.href=`/portfolio`");
-    about_li.setAttribute("onclick", "location.href=`/portfolio/support`");
-    github_li.setAttribute(
-      "onclick",
-      "location.href=`https://github.com/guyguy25`"
-    );
-  }
-  if (window.innerWidth >= 800) {
-    if (document.querySelector("nav > ul > li").hasAttribute("onclick")) {
-      home_li.removeAttribute("onclick");
-      about_li.removeAttribute("onclick");
-      github_li.removeAttribute("onclick");
-    }
-  }
-}
-
-// Check if it is under 800px width or not with an interval of 0.001 second
-setInterval(toggleRedirect, 1);
 
 // Light/dark theme
 html = document.querySelector("html");
@@ -73,7 +153,7 @@ english = document.querySelector(".en");
 french = document.querySelector(".fr");
 
 document.querySelector(".languages").addEventListener("click", function () {
-  if (window.innerWidth <= 800) {
+  if (window.innerWidth <= 870) {
     document.querySelector(".languages").classList.toggle("open");
   }
 });
@@ -125,7 +205,7 @@ if (!localStorage.getItem("languages")) {
 // Nav button add open class
 
 document.querySelector("#nav-icon").addEventListener("click", function () {
-  document.querySelector("#nav-icon").classList.toggle("open");
   document.querySelector("nav").classList.toggle("open");
+  document.querySelector("#nav-icon").classList.toggle("open");
   document.querySelector(".overlay").classList.toggle("open");
 });

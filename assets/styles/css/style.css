@@ -6,6 +6,15 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow: hidden;
+}
+
+main {
+  height: 100%;
+  overflow: scroll;
+}
+
 html,
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -15,18 +24,35 @@ body {
   padding: 0px;
 }
 
+::-webkit-scrollbar {
+  background: transparent;
+  width: 8px;
+  height: 100%;
+  margin: 15%;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(140, 140, 140);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  margin-top: 80px;
+}
+
 /* Dark mode */
 
 html.dark > body {
   background-color: #121212;
+  /* background-color: #1A1D1E; */
   color: white;
 }
 
 html.dark > body > header > nav {
   z-index: 15;
-  background: #24242400;
-  /* border-bottom: 4px solid #fff; */
-  box-shadow: 0px 0px 9px 3px rgba(255, 255, 255, 0.279)
+  background: #121212;
+  /* background: #1A1D1E; */
+  border-bottom: 1px solid #000;
 }
 
 html.dark > body > header > nav.open {
@@ -51,10 +77,11 @@ html.dark > body > header > nav > .button-theme .change-theme:hover {
 
 html.dark > body > header > nav > ul > li > a {
   color: #fff;
+  cursor: pointer;
 }
 
 html.dark > body > header > nav > ul > li > .active {
-  color: #000;
+  color: #FDD441;
 }
 
 html.dark > body > header > nav > ul > .languages > .langues {
@@ -77,15 +104,16 @@ html.dark > body > main > .content > .links > .link > a > .svg-link {
 /* Light mode */
 
 html.light > body {
-  background-color: #bbb;
+  /* background-color: #bbb; */
+  background-color: #FBFDFE;
   color: black;
 }
 
 html.light > body > header > nav {
   z-index: 15;
-  background: #ffffff00;
-  /* border-bottom: 4px solid #b3b1b1a8; */
-  box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.279)
+  background: #FBFDFE;
+  border-bottom: 1px solid #b3b1b1;
+  /* box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.279) */
 }
 
 html.light > body > header > nav.open {
@@ -110,6 +138,11 @@ html.light > body > header > nav > .button-theme .change-theme:hover {
 
 html.light > body > header > nav > ul > li > a {
   color: #242629;
+  cursor: pointer;
+}
+
+html.light > body > header > nav > ul > li > .active {
+  color: #FDD441;
 }
 
 html.light > body > header > nav > ul > .languages > .langues {
@@ -117,11 +150,11 @@ html.light > body > header > nav > ul > .languages > .langues {
 }
 
 html.light > body > main > .content > .card {
-  background-color: #fff;
+  background-color: #d9d9d9;
 }
 
 html.light > body > main > .content > .links > .link {
-  background-color: #ffffff;
+  background-color: #d5d2d2;
 }
 
 html.light > body > main > .content > .links > .link > a > .svg-link {
@@ -133,24 +166,23 @@ html.light > body > main > .content > .links > .link > a > .svg-link {
 nav {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   position: fixed;
-  transition: background 0.3s ease-in-out;
+  transition: .3s ease-in-out;
   height: 80px;
   width: 100%;
 }
 
 .nav-title {
-  position: absolute;
-  margin: 11px 35px;
+  transition: .3s linear;
+  position: inherit;
+  margin: 20px 0px 0px 50px;
   cursor: pointer;
-
   font-weight: bold;
   font-size: 30px;
-  padding: 7px 13px;
 }
 
 nav ul {
   float: right;
-  margin-right: 20px;
+  margin-right: 30px;
 }
 
 nav ul li {
@@ -167,7 +199,7 @@ nav ul li a:hover {
 
 #nav-icon {
   bottom: 35px;
-  left: 31px;
+  left: 45px;
   float: left;
   display: none;
   width: 45px;
@@ -244,9 +276,10 @@ nav ul li a:hover {
 }
 
 .button-theme {
+  cursor: pointer;
   position: relative;
   float: right;
-  margin-right: 70px;
+  margin-right: 75px;
   height: 75px;
 }
 
@@ -258,28 +291,6 @@ nav ul li a:hover {
   background-repeat: no-repeat;
   transition: background-image 0.3s ease-in-out;
 }
-
-.button-theme:hover .change-theme {
-  fill: red;
-}
-
-/* .button-theme {
-  padding: 9px;
-  right: 21px;
-  top: 13px;
-  border-radius: 5px;
-  position: absolute;
-} */
-
-/* .button-theme:hover {
-  background-color: #bbb;
-}
-
-.change-theme {
-  padding: 15px;
-  background-repeat: no-repeat;
-  transition: background-image 0.3s ease-in-out;
-} */
 
 .languages:hover > .langues {
   display: block;
@@ -327,9 +338,13 @@ nav ul li a:hover {
   width: 20px;
 }
 
+.languages > span {
+  cursor: pointer;
+}
+
 .langues.fr {
   position: absolute;
-  right: 235px;
+  right: 115px;
   display: none;
   height: 65px;
   width: 115px;
@@ -398,12 +413,6 @@ nav ul li a:hover {
   top: 35px;
 }
 
-.active {
-  background: rgb(211 211 211 / 48%);
-  padding: 5px;
-  border-radius: 5px;
-}
-
 /* Style main */
 
 .page {
@@ -466,6 +475,12 @@ nav ul li a:hover {
   padding: 0 15%;
   font-size: 1.2em;
   font-weight: normal;
+}
+
+/* About */
+
+.about {
+  margin: 600px 0px 600px 10px;
 }
 
 /* Links */
@@ -547,21 +562,18 @@ nav ul li a:hover {
     color: #fff;
   }
 
-  html.dark > body > header > nav > ul > li > .active {
-    color: #fff;
-  }
-
   .button-theme {
     height: 65px;
-  }
-
-  .nav-title {
-    margin: 5px 40px;
   }
 
   nav {
     z-index: 2;
     height: 64px;
+  }
+
+  .nav-title {
+    position: inherit;
+    margin: 13px 0px 0px 70px;
   }
 
   #nav-icon {
@@ -585,6 +597,7 @@ nav ul li a:hover {
     left: -100%;
     text-align: left;
   }
+
   nav ul li {
     display: block;
     margin: 0 0;
@@ -680,7 +693,7 @@ nav ul li a:hover {
     top: 60px;
     left: 20px;
     content: "";
-    width: 78px;
+    width: 76px;
     height: 3px;
     background-color: rgb(123, 123, 199);
   }
@@ -716,7 +729,7 @@ nav ul li a:hover {
   }
 
   .langues > .fr:hover::before {
-    width: 78px;
+    width: 76px;
   }
 
   .langues > .en:hover::before {
