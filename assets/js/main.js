@@ -1,6 +1,13 @@
-// ScrollReveal().reveal('.headline');
-// ScrollReveal().reveal('.tagline', { delay: 500 });
-// ScrollReveal().reveal('.punchline', { delay: 2000 });
+// ScrollReveal code
+
+const sr = ScrollReveal({
+  origin: 'top',
+  distance: '60px',
+  duration: 2500,
+  delay: 300
+});
+
+sr.reveal(`.home__section`);
 
 home_li = document.querySelectorAll("nav > ul li")[0];
 home_a = document.querySelectorAll("nav > ul li a")[0];
@@ -81,7 +88,6 @@ main.addEventListener("scroll", () => {
       skills_a.classList.remove("active")
     }
   }
-  // console.log(main.scrollTop)
 })
 
 home_li.addEventListener('click', function () {
@@ -89,15 +95,6 @@ home_li.addEventListener('click', function () {
     top: 0,
     behavior: 'smooth',
   });
-  // if(!home_a.classList.contains("active")) {
-  //   home_a.classList.add("active");
-  // };
-  // if(about_a.classList.contains("active")) {
-  //   about_a.classList.remove("active");
-  // };
-  // if(contact_a.classList.contains("active")) {
-  //   contact_a.classList.remove("active");
-  // };
 })
 
 about_li.addEventListener('click', function () {
@@ -105,15 +102,6 @@ about_li.addEventListener('click', function () {
     top: 1250,
     behavior: 'smooth',
   });
-  // if(!about_a.classList.contains("active")) {
-  //   about_a.classList.add("active");
-  // };
-  // if(home_a.classList.contains("active")) {
-  //   home_a.classList.remove("active");
-  // };
-  // if(contact_a.classList.contains("active")) {
-  //   contact_a.classList.remove("active");
-  // };
 })
 
 skills_li.addEventListener('click', function () {
@@ -121,35 +109,13 @@ skills_li.addEventListener('click', function () {
     top: 2400,
     behavior: 'smooth',
   });
-  // if(!about_a.classList.contains("active")) {
-  //   about_a.classList.add("active");
-  // };
-  // if(home_a.classList.contains("active")) {
-  //   home_a.classList.remove("active");
-  // };
-  // if(contact_a.classList.contains("active")) {
-  //   contact_a.classList.remove("active");
-  // };
 })
 
 contact_li.addEventListener('click', function () {
-  // if(!contact_a.classList.contains("active")) {
-  //   contact_a.classList.add("active");
-  // };
-  // if(home_a.classList.contains("active")) {
-  //   home_a.classList.remove("active");
-  // };
-  // if(about_a.classList.contains("active")) {
-  //   about_a.classList.remove("active");
-  // };
-  // if(skills_a.classList.contains("active")) {
-  //   skills_a.classList.remove("active")
-  // }
   main.scrollTo({
-    top: 2400,
+    top: 3500,
     behavior: 'smooth',
   });
-  
 })
 
 // Removing class open when the window is larger than 970px width
@@ -240,16 +206,12 @@ if (!localStorage.getItem("languages")) {
   langues.classList.value = "langues en";
 } else {
   if (localStorage.getItem("languages") == "fr") {
-    document.querySelector(".description").innerHTML =
-      "Salut, je suis un developpeur Français jeune et passionné. Je suis principalement spécialisé dans le developpement web mais je touche à tout.";
     home_a.innerHTML = "Accueil";
     about_a.innerHTML = "À propos";
     skills_a.innerHTML = "Compétences"
     contact_a.innerHTML = "Contacter";
     document.querySelector("nav > ul > li > span").innerHTML = "Langue";
   } else {
-    document.querySelector(".description").innerHTML =
-      "Hi, I'm a young and passionate French developer. I'm mainly specialized in web development but I touch everything.";
     home_a.innerHTML = "Home";
     about_a.innerHTML = "About";
     skills_a.innerHTML = "Skills"
