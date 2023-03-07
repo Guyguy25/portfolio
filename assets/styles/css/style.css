@@ -24,6 +24,8 @@ body {
   padding: 0px;
 }
 
+/* Scrollbar */
+
 ::-webkit-scrollbar {
   background: transparent;
   width: 8px;

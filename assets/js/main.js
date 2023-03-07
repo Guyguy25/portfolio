@@ -8,6 +8,9 @@ const sr = ScrollReveal({
 });
 
 sr.reveal(`.home__section`);
+sr.reveal(`.links`, {delay:800, origin:'bottom'})
+
+/* Variable */
 
 home_li = document.querySelectorAll("nav > ul li")[0];
 home_a = document.querySelectorAll("nav > ul li a")[0];
