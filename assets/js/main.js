@@ -28,10 +28,8 @@ main = document.querySelector("main");
 
 // Scroll Système
 
-if(main.scrollTop == 0) {
-  if(!home_a.classList.contains("active")) {
-    home_a.classList.add("active")
-  }
+if(main.scrollTop == 0 && !home_a.classList.contains("active")) {
+  home_a.classList.add("active")
 }
 
 main.addEventListener("scroll", () => {
@@ -39,56 +37,44 @@ main.addEventListener("scroll", () => {
     if(!home_a.classList.contains("active")) {
       home_a.classList.add("active")
     }
-    if(about_a.classList.contains("active")) {
-      about_a.classList.remove("active")
-    }
-    if(contact_a.classList.contains("active")) {
-      contact_a.classList.remove("active")
-    }
-    if(skills_a.classList.contains("active")) {
+
+    if(about_a.classList.contains("active") || contact_a.classList.contains("active") || skills_a.classList.contains("active")) {
+      about_a.classList.remove("active") ||
+      contact_a.classList.remove("active") ||
       skills_a.classList.remove("active")
     }
   }
+
   if(main.scrollTop >= 1250){
     if(!about_a.classList.contains("active")) {
       about_a.classList.add("active")
     }
-    if(home_a.classList.contains("active")) {
-      home_a.classList.remove("active")
-    }
-    if(contact_a.classList.contains("active")) {
-      contact_a.classList.remove("active")
-    }
-    if(skills_a.classList.contains("active")) {
+    if(home_a.classList.contains("active") || contact_a.classList.contains("active") || skills_a.classList.contains("active")) {
+      home_a.classList.remove("active") ||
+      contact_a.classList.remove("active") ||
       skills_a.classList.remove("active")
     }
   }
+
   if(main.scrollTop >= 2400){
     if(!skills_a.classList.contains("active")) {
       skills_a.classList.add("active")
     }
-    if(home_a.classList.contains("active")) {
-      home_a.classList.remove("active")
-    }
-    if(about_a.classList.contains("active")) {
+    if(home_a.classList.contains("active") || contact_a.classList.contains("active") || about_a.classList.contains("active")) {
+      home_a.classList.remove("active") ||
+      contact_a.classList.remove("active") ||
       about_a.classList.remove("active")
     }
-    if(contact_a.classList.contains("active")) {
-      contact_a.classList.remove("active")
-    }
   }
+
   if(main.scrollTop >= 3500){
     if(!contact_a.classList.contains("active")) {
       contact_a.classList.add("active")
     }
-    if(home_a.classList.contains("active")) {
-      home_a.classList.remove("active")
-    }
-    if(about_a.classList.contains("active")) {
+    if(home_a.classList.contains("active") || skills_a.classList.contains("active") || about_a.classList.contains("active")) {
+      home_a.classList.remove("active") ||
+      skills_a.classList.remove("active") ||
       about_a.classList.remove("active")
-    }
-    if(skills_a.classList.contains("active")) {
-      skills_a.classList.remove("active")
     }
   }
 })
@@ -124,22 +110,18 @@ contact_li.addEventListener('click', function () {
 // Removing class open when the window is larger than 970px width
 
 function RemoveOpen() {
-  if (document.querySelector("#nav-icon").classList.contains("open")) {
-    if (window.innerWidth >= 970) {
-      document.querySelector("#nav-icon").classList.remove("open");
-      document.querySelector("nav").classList.remove("open");
-      document.querySelector(".overlay").classList.remove("open");
-    }
+  if (document.querySelector("#nav-icon").classList.contains("open") && window.innerWidth >= 970) {
+    document.querySelector("#nav-icon").classList.remove("open");
+    document.querySelector("nav").classList.remove("open");
+    document.querySelector(".overlay").classList.remove("open");
   }
 
   if (!document.querySelector("nav").classList.contains("open")) {
     document.querySelector(".languages").classList.remove("open")
   }
 
-  if (document.querySelector(".languages").classList.contains("open")) {
-    if (window.innerWidth >= 970) {
-      document.querySelector(".languages").classList.remove("open");
-    }
+  if (document.querySelector(".languages").classList.contains("open") && window.innerWidth >= 970) {
+    document.querySelector(".languages").classList.remove("open");
   }
 }
 
