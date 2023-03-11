@@ -90,11 +90,11 @@ html.dark > body > header > nav > ul > .languages > .langues {
   background: rgb(100, 100, 100);
 }
 
-html.dark > body > main > .content > .links > .link {
+html.dark > body > main > .links > .link {
   background-color: #242424;
 }
 
-html.dark > body > main > .content > .links > .link > a > .svg-link {
+html.dark > body > main > .links > .link > a > .svg-link {
   fill: white;
 }
 
@@ -147,15 +147,11 @@ html.light > body > header > nav > ul > .languages > .langues {
   background: rgb(255, 255, 255);
 }
 
-html.light > body > main > .content > .card {
-  background-color: #d9d9d9;
-}
-
-html.light > body > main > .content > .links > .link {
+html.light > body > main > .links > .link {
   background-color: #d5d2d2;
 }
 
-html.light > body > main > .content > .links > .link > a > .svg-link {
+html.light > body > main > .links > .link > a > .svg-link {
   fill: #000000;
 }
 
@@ -410,11 +406,10 @@ nav ul li a:hover {
   top: 35px;
 }
 
-/* Style main */
+/* Section */
 
-.page {
-  position: relative;
-  padding: 15rem 20% 0;
+.section {
+  padding: 15rem 0 1rem;
 }
 
 /* Home section */
@@ -441,12 +436,6 @@ nav ul li a:hover {
   color: #A9A4A4;
 }
 
-/* About */
-
-.about {
-  margin: 600px 0px 1100px 10px;
-}
-
 /* Links */
 
 .svg-link {
@@ -462,14 +451,13 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-.content > .links {
+.links {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
   margin-top: 6rem;
-  /* width: 20%; */
   width: calc(100% - 60%);
   max-width: 1000px;
 }
@@ -735,12 +723,7 @@ nav ul li a:hover {
     visibility: visible;
   }
 
-  .page {
-    position: relative;
-    padding: 10rem 10% 0;
-  }
-
-  .content > .links {
+  .links {
     width: 80%;
   }
 
@@ -752,33 +735,25 @@ nav ul li a:hover {
 }
 
 @media (max-height: 950px) {
-  .content > .links {
+  .links {
     margin-top: 17rem;
   }
 }
 
 @media (max-height: 900px) {
-  .content > .links {
+  .links {
     margin-top: 12rem;
   }
 }
 
 @media (max-height: 800px) {
-  .content > .links {
+  .links {
     margin-top: 3rem;
   }
 }
 
 @media (max-height: 700px) {
-  .content > .links {
+  .links {
     margin-top: 2rem;
   }
-}
-
-/* About.html style */
-
-.page-about {
-  z-index: -1;
-  position: relative;
-  padding: 10rem 10% 0;
 }

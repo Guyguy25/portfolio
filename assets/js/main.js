@@ -1,3 +1,19 @@
+/* Variable */
+
+home_li = document.querySelectorAll("nav > ul li")[0]
+home_a = document.querySelectorAll("nav > ul li a")[0]
+
+about_li = document.querySelectorAll("nav > ul li")[1]
+about_a = document.querySelectorAll("nav > ul li a")[1]
+
+skills_li = document.querySelectorAll("nav > ul li")[2]
+skills_a = document.querySelectorAll("nav > ul li a")[2]
+
+contact_li = document.querySelectorAll("nav > ul li")[3]
+contact_a = document.querySelectorAll("nav > ul li a")[3]
+
+main = document.querySelector("main")
+
 // ScrollReveal code
 
 const sr = ScrollReveal({
@@ -5,26 +21,10 @@ const sr = ScrollReveal({
   distance: '60px',
   duration: 2500,
   delay: 300
-});
+})
 
-sr.reveal(`.home__section`);
+sr.reveal(`.home__section`)
 sr.reveal(`.links`, {delay:800, origin:'bottom'})
-
-/* Variable */
-
-home_li = document.querySelectorAll("nav > ul li")[0];
-home_a = document.querySelectorAll("nav > ul li a")[0];
-
-about_li = document.querySelectorAll("nav > ul li")[1];
-about_a = document.querySelectorAll("nav > ul li a")[1];
-
-skills_li = document.querySelectorAll("nav > ul li")[2];
-skills_a = document.querySelectorAll("nav > ul li a")[2];
-
-contact_li = document.querySelectorAll("nav > ul li")[3];
-contact_a = document.querySelectorAll("nav > ul li a")[3];
-
-main = document.querySelector("main");
 
 // Scroll Système
 
@@ -33,7 +33,7 @@ if(main.scrollTop == 0 && !home_a.classList.contains("active")) {
 }
 
 main.addEventListener("scroll", () => {
-  if(main.scrollTop < 1250){
+  if(main.scrollTop < 861){
     if(!home_a.classList.contains("active")) {
       home_a.classList.add("active")
     }
@@ -45,7 +45,7 @@ main.addEventListener("scroll", () => {
     }
   }
 
-  if(main.scrollTop >= 1250){
+  if(main.scrollTop >= 861){
     if(!about_a.classList.contains("active")) {
       about_a.classList.add("active")
     }
@@ -56,7 +56,7 @@ main.addEventListener("scroll", () => {
     }
   }
 
-  if(main.scrollTop >= 2400){
+  if(main.scrollTop >= 1901){
     if(!skills_a.classList.contains("active")) {
       skills_a.classList.add("active")
     }
@@ -67,7 +67,7 @@ main.addEventListener("scroll", () => {
     }
   }
 
-  if(main.scrollTop >= 3500){
+  if(main.scrollTop >= 2941){
     if(!contact_a.classList.contains("active")) {
       contact_a.classList.add("active")
     }
@@ -79,41 +79,13 @@ main.addEventListener("scroll", () => {
   }
 })
 
-home_li.addEventListener('click', function () {
-  main.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-  });
-})
-
-about_li.addEventListener('click', function () {
-  main.scrollTo({
-    top: 1250,
-    behavior: 'smooth',
-  });
-})
-
-skills_li.addEventListener('click', function () {
-  main.scrollTo({
-    top: 2400,
-    behavior: 'smooth',
-  });
-})
-
-contact_li.addEventListener('click', function () {
-  main.scrollTo({
-    top: 3500,
-    behavior: 'smooth',
-  });
-})
-
 // Removing class open when the window is larger than 970px width
 
 function RemoveOpen() {
   if (document.querySelector("#nav-icon").classList.contains("open") && window.innerWidth >= 970) {
-    document.querySelector("#nav-icon").classList.remove("open");
-    document.querySelector("nav").classList.remove("open");
-    document.querySelector(".overlay").classList.remove("open");
+    document.querySelector("#nav-icon").classList.remove("open")
+    document.querySelector("nav").classList.remove("open")
+    document.querySelector(".overlay").classList.remove("open")
   }
 
   if (!document.querySelector("nav").classList.contains("open")) {
@@ -121,94 +93,93 @@ function RemoveOpen() {
   }
 
   if (document.querySelector(".languages").classList.contains("open") && window.innerWidth >= 970) {
-    document.querySelector(".languages").classList.remove("open");
+    document.querySelector(".languages").classList.remove("open")
   }
 }
 
 // Check if it is under 970px width or not with an interval of 0.001 second
-setInterval(RemoveOpen, 1);
+setInterval(RemoveOpen, 1)
 
 
 // Light/dark theme
-html = document.querySelector("html");
+html = document.querySelector("html")
 
 document.querySelector(".button-theme").addEventListener("click", function () {
   if (html.classList.contains("dark")) {
-    html.classList.remove("dark");
-    html.classList.add("light");
-    localStorage.setItem("theme", "light");
+    html.classList.remove("dark")
+    html.classList.add("light")
+    localStorage.setItem("theme", "light")
   } else {
-    html.classList.remove("light");
-    html.classList.add("dark");
-    localStorage.setItem("theme", "dark");
+    html.classList.remove("light")
+    html.classList.add("dark")
+    localStorage.setItem("theme", "dark")
   }
-});
+})
 
-html.classList.add(localStorage.getItem("theme"));
+html.classList.add(localStorage.getItem("theme"))
 
 // Set default theme in dark
 if (!localStorage.getItem("theme")) {
-  html.classList.value = "dark";
+  html.classList.value = "dark"
 }
 
 // Language traductor système
 
-langues = document.querySelector(".langues");
-english = document.querySelector(".en");
-french = document.querySelector(".fr");
+langues = document.querySelector(".langues")
+english = document.querySelector(".en")
+french = document.querySelector(".fr")
 
 document.querySelector(".languages").addEventListener("click", function () {
   if (window.innerWidth <= 970) {
-    document.querySelector(".languages").classList.toggle("open");
+    document.querySelector(".languages").classList.toggle("open")
   }
-});
+})
 
 french.addEventListener("click", function () {
   if (langues.classList.contains("en")) {
-    langues.classList.remove("en");
-    langues.classList.add("fr");
-    html.setAttribute("lang", "fr");
-    localStorage.setItem("languages", "fr");
-    location.reload();
+    langues.classList.remove("en")
+    langues.classList.add("fr")
+    html.setAttribute("lang", "fr")
+    localStorage.setItem("languages", "fr")
+    location.reload()
   }
-});
+})
 
 english.addEventListener("click", function () {
   if (langues.classList.contains("fr")) {
-    langues.classList.remove("fr");
-    langues.classList.add("en");
-    html.setAttribute("lang", "en");
-    localStorage.setItem("languages", "en");
-    location.reload();
+    langues.classList.remove("fr")
+    langues.classList.add("en")
+    html.setAttribute("lang", "en")
+    localStorage.setItem("languages", "en")
+    location.reload()
   }
-});
+})
 
-html.setAttribute("lang", `${localStorage.getItem("languages")}`);
-langues.classList.add(localStorage.getItem("languages"));
+html.setAttribute("lang", `${localStorage.getItem("languages")}`)
+langues.classList.add(localStorage.getItem("languages"))
 
 if (!localStorage.getItem("languages")) {
-  html.setAttribute("lang", "en");
-  langues.classList.value = "langues en";
+  html.setAttribute("lang", "en")
+  langues.classList.value = "langues en"
 } else {
   if (localStorage.getItem("languages") == "fr") {
-    home_a.innerHTML = "Accueil";
-    about_a.innerHTML = "À propos";
+    home_a.innerHTML = "Accueil"
+    about_a.innerHTML = "À propos"
     skills_a.innerHTML = "Compétences"
-    contact_a.innerHTML = "Contacter";
-    document.querySelector("nav > ul > li > span").innerHTML = "Langue";
+    contact_a.innerHTML = "Contacter"
+    document.querySelector("nav > ul > li > span").innerHTML = "Langue"
   } else {
-    home_a.innerHTML = "Home";
-    about_a.innerHTML = "About";
+    home_a.innerHTML = "Home"
+    about_a.innerHTML = "About"
     skills_a.innerHTML = "Skills"
-    contact_a.innerHTML = "Contact";
-    document.querySelector("nav > ul > li > span").innerHTML = "Language";
+    contact_a.innerHTML = "Contact"
+    document.querySelector("nav > ul > li > span").innerHTML = "Language"
   }
 }
 
 // Nav button add open class
 
 document.querySelector("#nav-icon").addEventListener("click", function () {
-  document.querySelector("nav").classList.toggle("open");
-  document.querySelector("#nav-icon").classList.toggle("open");
-  document.querySelector(".overlay").classList.toggle("open");
-});
+  document.querySelector("nav").classList.toggle("open")
+  document.querySelector("#nav-icon").classList.toggle("open")
+})
