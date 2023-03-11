@@ -12,6 +12,10 @@ skills_a = document.querySelectorAll("nav > ul li a")[2]
 contact_li = document.querySelectorAll("nav > ul li")[3]
 contact_a = document.querySelectorAll("nav > ul li a")[3]
 
+about_section = document.getElementById('about')
+skills_section = document.getElementById('skills')
+contact_section = document.getElementById('contact')
+
 main = document.querySelector("main")
 
 // ScrollReveal code
@@ -33,7 +37,7 @@ if(main.scrollTop == 0 && !home_a.classList.contains("active")) {
 }
 
 main.addEventListener("scroll", () => {
-  if(main.scrollTop < 861){
+  if(main.scrollTop < about_section.offsetTop - document.body.scrollTop){
     if(!home_a.classList.contains("active")) {
       home_a.classList.add("active")
     }
@@ -45,7 +49,7 @@ main.addEventListener("scroll", () => {
     }
   }
 
-  if(main.scrollTop >= 861){
+  if(main.scrollTop >= about_section.offsetTop - document.body.scrollTop){
     if(!about_a.classList.contains("active")) {
       about_a.classList.add("active")
     }
@@ -56,7 +60,7 @@ main.addEventListener("scroll", () => {
     }
   }
 
-  if(main.scrollTop >= 1901){
+  if(main.scrollTop >= skills_section.offsetTop - document.body.scrollTop){
     if(!skills_a.classList.contains("active")) {
       skills_a.classList.add("active")
     }
@@ -67,7 +71,7 @@ main.addEventListener("scroll", () => {
     }
   }
 
-  if(main.scrollTop >= 2941){
+  if(main.scrollTop >= contact_section.offsetTop - document.body.scrollTop){
     if(!contact_a.classList.contains("active")) {
       contact_a.classList.add("active")
     }
@@ -79,10 +83,11 @@ main.addEventListener("scroll", () => {
   }
 })
 
-// Removing class open when the window is larger than 970px width
+
+// Removing class open when the window is larger than 1095px width
 
 function RemoveOpen() {
-  if (document.querySelector("#nav-icon").classList.contains("open") && window.innerWidth >= 970) {
+  if (document.querySelector("#nav-icon").classList.contains("open") && window.innerWidth >= 1095) {
     document.querySelector("#nav-icon").classList.remove("open")
     document.querySelector("nav").classList.remove("open")
     document.querySelector(".overlay").classList.remove("open")
@@ -92,12 +97,12 @@ function RemoveOpen() {
     document.querySelector(".languages").classList.remove("open")
   }
 
-  if (document.querySelector(".languages").classList.contains("open") && window.innerWidth >= 970) {
+  if (document.querySelector(".languages").classList.contains("open") && window.innerWidth >= 1095) {
     document.querySelector(".languages").classList.remove("open")
   }
 }
 
-// Check if it is under 970px width or not with an interval of 0.001 second
+// Check if it is under 1095px width or not with an interval of 0.001 second
 setInterval(RemoveOpen, 1)
 
 
@@ -130,7 +135,7 @@ english = document.querySelector(".en")
 french = document.querySelector(".fr")
 
 document.querySelector(".languages").addEventListener("click", function () {
-  if (window.innerWidth <= 970) {
+  if (window.innerWidth <= 1095) {
     document.querySelector(".languages").classList.toggle("open")
   }
 })

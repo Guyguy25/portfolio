@@ -462,7 +462,7 @@ nav ul li a:hover {
   max-width: 1000px;
 }
 
-@media (max-width: 970px) {
+@media (max-width: 1095px) {
   html.dark > body > header > nav > ul > .languages > .langues,
   html.light > body > header > nav > ul > .languages > .langues {
     background: none;
