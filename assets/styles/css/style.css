@@ -408,13 +408,23 @@ nav ul li a:hover {
 
 /* Section */
 
-.section {
-  padding: 15rem 0 1rem;
+.about__section, .skills__section, .contact__section {
+  padding: 9rem 0 0;
+}
+
+.section__title {
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 968px;
 }
 
 /* Home section */
 
 .home__section {
+  padding: 15rem 0 0rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -755,5 +765,12 @@ nav ul li a:hover {
 @media (max-height: 700px) {
   .links {
     margin-top: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+      margin-left: auto;
+      margin-right: auto;
   }
 }

@@ -13,8 +13,15 @@ contact_li = document.querySelectorAll("nav > ul li")[3]
 contact_a = document.querySelectorAll("nav > ul li a")[3]
 
 about_section = document.getElementById('about')
+about_section_h1 = document.querySelector("#about > .section__title")
+
 skills_section = document.getElementById('skills')
+skills_section_h1 = document.querySelector("#skills > .section__title")
+
 contact_section = document.getElementById('contact')
+contact_section_h1 = document.querySelector("#contact > .section__title")
+
+dev_status = document.querySelector("#home > p")
 
 main = document.querySelector("main")
 
@@ -37,6 +44,8 @@ if(main.scrollTop == 0 && !home_a.classList.contains("active")) {
 }
 
 main.addEventListener("scroll", () => {
+  console.log(main.scrollTop)
+
   if(main.scrollTop < about_section.offsetTop - document.body.scrollTop){
     if(!home_a.classList.contains("active")) {
       home_a.classList.add("active")
@@ -168,12 +177,24 @@ if (!localStorage.getItem("languages")) {
   langues.classList.value = "langues en"
 } else {
   if (localStorage.getItem("languages") == "fr") {
+    dev_status.innerHTML = "developpeur full-stack"
+    about_section_h1.innerHTML = "À propos"
+    skills_section_h1.innerHTML = "Compétences"
+    contact_section_h1.innerHTML = "Contacter"
+
+    /* Nav French Traduction */
     home_a.innerHTML = "Accueil"
     about_a.innerHTML = "À propos"
     skills_a.innerHTML = "Compétences"
     contact_a.innerHTML = "Contacter"
     document.querySelector("nav > ul > li > span").innerHTML = "Langue"
   } else {
+    dev_status.innerHTML = "full-stack developer"
+    about_section_h1.innerHTML = "About"
+    skills_section_h1.innerHTML = "Skills"
+    contact_section_h1.innerHTML = "Contact"
+
+    /* Nav English Traduction */
     home_a.innerHTML = "Home"
     about_a.innerHTML = "About"
     skills_a.innerHTML = "Skills"
