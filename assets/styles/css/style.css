@@ -28,10 +28,6 @@ body {
 
 /* Scrollbar */
 
-:root {
-  scrollbar-color: transparent transparent;
-}
-
 ::-webkit-scrollbar {
   background: transparent;
   width: 8px;
