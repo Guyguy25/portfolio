@@ -860,6 +860,16 @@ nav ul li a:hover {
   }
 }
 
+@media (max-height: 800px) {
+  .links {
+    margin-top: 8rem;
+  }
+
+  .home__section {
+    padding: 12rem 0 0;
+  }
+}
+
 @media (max-height: 700px) {
   .links {
     margin-top: 4em;
