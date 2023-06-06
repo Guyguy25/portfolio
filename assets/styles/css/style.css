@@ -811,7 +811,11 @@ nav ul li a:hover {
 
 @media (max-height: 700px) {
   .links {
-    margin-top: 2rem;
+    margin-top: 8em;
+  }
+
+  .home__section {
+    padding: 10rem 0 0;
   }
 }
 
