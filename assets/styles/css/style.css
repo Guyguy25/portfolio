@@ -860,23 +860,13 @@ nav ul li a:hover {
   }
 }
 
-@media (max-height: 800px) {
-  .links {
-    margin-top: 8rem;
-  }
-
-  .home__section {
-    padding: 12rem 0 0;
-  }
-}
-
 @media (max-height: 700px) {
   .links {
-    margin-top: 8em;
+    margin-top: 4em;
   }
 
   .home__section {
-    padding: 10rem 0 0;
+    padding: 7rem 0 0;
   }
 }
 
