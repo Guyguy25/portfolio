@@ -488,9 +488,13 @@ nav ul li a:hover {
 }
 
 .link {
-  padding: 10px;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.link > a {
+  display: block;
+  padding: 10px;
 }
 
 .links {
