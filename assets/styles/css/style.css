@@ -10,11 +10,6 @@ html {
   overflow: hidden;
 }
 
-main {
-  height: 100%;
-  overflow: scroll;
-}
-
 html,
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -24,18 +19,33 @@ body {
   padding: 0px;
 }
 
+/* All Section */
+
+.all {
+  overflow: scroll;
+  height: 100%;
+}
+
 /* Scrollbar */
+
+:root {
+  scrollbar-color: transparent transparent;
+}
 
 ::-webkit-scrollbar {
   background: transparent;
   width: 8px;
   height: 100%;
-  margin: 15%;
 }
 
 ::-webkit-scrollbar-thumb {
   background: rgb(140, 140, 140);
   border-radius: 10px;
+}
+
+::-webkit-scrollbar-corner {
+  border-radius: 10px;
+  background: lightblue;
 }
 
 ::-webkit-scrollbar-track {
@@ -53,7 +63,6 @@ html.dark > body {
 html.dark > body > header > nav {
   z-index: 15;
   background: #121212;
-  /* background: #1A1D1E; */
   border-bottom: 1px solid #000;
 }
 
@@ -90,11 +99,22 @@ html.dark > body > header > nav > ul > .languages > .langues {
   background: rgb(100, 100, 100);
 }
 
-html.dark > body > main > .links > .link {
+html.dark > body > .all > main > .links > .link {
+  transition: all .3s ease-in-out;
   background-color: #242424;
 }
 
-html.dark > body > main > .links > .link > a > .svg-link {
+html.dark > body > .all > main > .links > .link:hover {
+  background-color: #777777;
+  transform: scale(1.1);
+}
+
+html.dark > body > .all > main > .links > .link:hover > a > svg {
+  fill: #ffffff;
+  transition: fill .5s ease-in-out;
+}
+
+html.dark > body > .all > main > .links > .link > a > .svg-link {
   fill: white;
 }
 
@@ -102,7 +122,6 @@ html.dark > body > main > .links > .link > a > .svg-link {
 /* Light mode */
 
 html.light > body {
-  /* background-color: #bbb; */
   background-color: #FBFDFE;
   color: black;
 }
@@ -147,11 +166,22 @@ html.light > body > header > nav > ul > .languages > .langues {
   background: rgb(255, 255, 255);
 }
 
-html.light > body > main > .links > .link {
+html.light > body > .all > main > .links > .link {
+  transition: all .3s ease-in-out;
   background-color: #d5d2d2;
 }
 
-html.light > body > main > .links > .link > a > .svg-link {
+html.light > body > .all > main > .links > .link:hover {
+  background-color: #777777;
+  transform: scale(1.1);
+}
+
+html.light > body > .all > main > .links > .link:hover > a > svg {
+  fill: #ffffff;
+  transition: fill .5s ease-in-out;
+}
+
+html.light > body > .all > main > .links > .link > a > .svg-link {
   fill: #000000;
 }
 
@@ -408,8 +438,12 @@ nav ul li a:hover {
 
 /* Section */
 
-.about__section, .skills__section, .contact__section {
+.about__section, .skills__section {
   padding: 9rem 0 0;
+}
+
+.contact__section {
+  padding: 9rem 0 8rem;
 }
 
 .section__title {
@@ -419,6 +453,8 @@ nav ul li a:hover {
 
 .container {
   max-width: 968px;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 /* Home section */
@@ -470,6 +506,18 @@ nav ul li a:hover {
   margin-top: 6rem;
   width: calc(100% - 60%);
   max-width: 1000px;
+}
+
+/* Footer */
+
+.footer {
+  position: relative;
+  display: block;
+  background-color: #FDD441;
+}
+
+.footer__container {
+  padding: 2rem 0 6rem;
 }
 
 @media (max-width: 1095px) {
@@ -570,7 +618,10 @@ nav ul li a:hover {
   }
 
   nav ul li a {
+    display: block;
     padding: 0 30px;
+    width: 100%;
+    height: 100%;
   }
 
   li.languages {
@@ -728,7 +779,7 @@ nav ul li a:hover {
   }
 
   .overlay.open {
-    transition: all 0.5s ease-in-out;
+    transition: all .7s ease-in-out;
     opacity: 0.5;
     visibility: visible;
   }

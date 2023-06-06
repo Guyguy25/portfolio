@@ -208,4 +208,5 @@ if (!localStorage.getItem("languages")) {
 document.querySelector("#nav-icon").addEventListener("click", function () {
   document.querySelector("nav").classList.toggle("open")
   document.querySelector("#nav-icon").classList.toggle("open")
+  document.querySelector(".overlay").classList.toggle("open")
 })
