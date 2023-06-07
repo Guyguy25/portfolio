@@ -508,6 +508,14 @@ nav ul li a:hover {
   max-width: 1000px;
 }
 
+/* Contact section */
+
+.contact__title {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
 /* Footer */
 
 .footer {
