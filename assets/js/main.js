@@ -177,7 +177,7 @@ if (!localStorage.getItem("languages")) {
   langues.classList.value = "langues en"
 } else {
   if (localStorage.getItem("languages") == "fr") {
-    dev_status.innerHTML = "developpeur full-stack"
+    dev_status.innerHTML = "developpeur front-end"
     about_section_h1.innerHTML = "À propos"
     skills_section_h1.innerHTML = "Compétences"
     contact_section_h1.innerHTML = "Contacter"
@@ -189,7 +189,7 @@ if (!localStorage.getItem("languages")) {
     contact_a.innerHTML = "Contacter"
     document.querySelector("nav > ul > li > span").innerHTML = "Langue"
   } else {
-    dev_status.innerHTML = "full-stack developer"
+    dev_status.innerHTML = "front-end developer"
     about_section_h1.innerHTML = "About"
     skills_section_h1.innerHTML = "Skills"
     contact_section_h1.innerHTML = "Contact"
