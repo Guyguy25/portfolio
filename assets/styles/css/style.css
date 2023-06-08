@@ -10,8 +10,15 @@ html {
   overflow: hidden;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
 html,
-body {
+body, button, input, textarea {
+  font-size: 0.938rem;
   font-family: Arial, Helvetica, sans-serif;
   transition: background 0.3s ease-in-out;
   height: 100%;
@@ -562,6 +569,16 @@ nav ul li a:hover {
 
 .contact__form-area {
   height: 11rem;
+}
+
+.button {
+  display: inline-block;
+  background-color: #FDD441;
+  color: #fdfafa;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: .4s;
 }
 
 /* Footer */
