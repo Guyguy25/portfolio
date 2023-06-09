@@ -125,11 +125,14 @@ html.dark > body > .all > main > .contact__section > .contact__container > .cont
   background-color: #121212;
 }
 
+html.dark > body > .all > main > .contact__section > .contact__container > .contact__content > .contact__info > .contact__card {
+  background-color: #3a3a3a;
+}
 
 /* Light mode */
 
 html.light > body {
-  background-color: #FBFDFE;
+  background-color: #fafcff;
   color: black;
 }
 
@@ -194,6 +197,10 @@ html.light > body > .all > main > .links > .link > a > .svg-link {
 
 html.light > body > .all > main > .contact__section > .contact__container > .contact__content > .contact__form > .contact__form-div > .contact__form-tag {
   background-color: #FBFDFE;
+}
+
+html.light > body > .all > main > .contact__section > .contact__container > .contact__content > .contact__info > .contact__card {
+  background-color: #fff;
 }
 
 /* Style nav */
@@ -571,6 +578,16 @@ nav ul li a:hover {
   height: 11rem;
 }
 
+.contact__container {
+  row-gap: 3rem;
+  padding-bottom: 3rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
 .button {
   display: inline-block;
   background-color: #FDD441;
@@ -579,6 +596,51 @@ nav ul li a:hover {
   border-radius: 0.5rem;
   font-weight: 500;
   transition: .4s;
+}
+
+.contact__info {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact__card {
+  box-shadow: 0 2px 16px hsla(219, 48%, 8%, .1);
+  padding: 1rem;
+  border-radius: .75rem;
+  text-align: center;
+}
+
+.contact__button {
+  color: #FDD441;
+  font-size: 0.813rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: .25rem;
+}
+
+.contact__card-data {
+  color: #525760;
+  display: block;
+  margin-bottom: .75rem;
+}
+
+.contact__card-title, .contact__card-data {
+  font-size: .813rem;
+}
+
+.contact__card-title {
+  font-weight: 1500;
+}
+
+.contact__card-title, .contact__card-data {
+  font-size: .813rem;
+}
+
+.contact__card-icon {
+  font-size: 2rem;
+  color: var(--title-color);
+  margin-bottom: .25rem;
 }
 
 /* Footer */
@@ -964,5 +1026,20 @@ nav ul li a:hover {
   .contact__form {
     width: 360px;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: 767px) {
+  .contact__container {
+      grid-template-columns: repeat(2, max-content);
+      justify-content: center;
+      column-gap: 3rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .contact__info {
+    grid-template-columns: 300px;
+    justify-content: center;
   }
 }
