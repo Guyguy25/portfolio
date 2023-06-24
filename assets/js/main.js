@@ -23,7 +23,7 @@ contact_section_h1 = document.querySelector("#contact > .section__title")
 
 dev_status = document.querySelector("#home > p")
 
-main = document.querySelector("main")
+main = document.querySelector(".all")
 
 // ScrollReveal code
 
@@ -44,7 +44,6 @@ if(main.scrollTop == 0 && !home_a.classList.contains("active")) {
 }
 
 main.addEventListener("scroll", () => {
-  console.log(main.scrollTop)
 
   if(main.scrollTop < about_section.offsetTop - document.body.scrollTop){
     if(!home_a.classList.contains("active")) {
