@@ -126,7 +126,15 @@ html.dark > body > .all > main > .contact__section > .contact__container > .cont
 }
 
 html.dark > body > .all > main > .contact__section > .contact__container > .contact__content > .contact__info > .contact__card {
-  background-color: #3a3a3a;
+  background-color: #313131;
+}
+
+html.dark > body > .all > main > .contact__section > .contact__container > .contact__content > .contact__info > .contact__card > .contact__card-icon {
+  fill: #ffffff;
+}
+
+html.dark > body > .all > main > .contact__section > .contact__container > .contact__content > .contact__info > .contact__card > .contact__card-data {
+  color: #9f9f9f;
 }
 
 /* Light mode */
@@ -201,6 +209,14 @@ html.light > body > .all > main > .contact__section > .contact__container > .con
 
 html.light > body > .all > main > .contact__section > .contact__container > .contact__content > .contact__info > .contact__card {
   background-color: #fff;
+}
+
+html.light > body > .all > main > .contact__section > .contact__container > .contact__content > .contact__info > .contact__card > .contact__card-icon {
+  fill: #000000;
+}
+
+html.light > body > .all > main > .contact__section > .contact__container > .contact__content > .contact__info > .contact__card > .contact__card-data {
+  color: #525760;
 }
 
 /* Style nav */
@@ -604,6 +620,7 @@ nav ul li a:hover {
 }
 
 .contact__card {
+  transition: background-color .3s;
   box-shadow: 0 2px 16px hsla(219, 48%, 8%, .1);
   padding: 1rem;
   border-radius: .75rem;
@@ -612,35 +629,34 @@ nav ul li a:hover {
 
 .contact__button {
   color: #FDD441;
-  font-size: 0.813rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: .25rem;
+  column-gap: .5rem;
 }
 
 .contact__card-data {
-  color: #525760;
+  transition: color .3s;
   display: block;
+  margin-top: 0.25rem;
   margin-bottom: .75rem;
 }
 
 .contact__card-title, .contact__card-data {
-  font-size: .813rem;
-}
-
-.contact__card-title {
-  font-weight: 1500;
-}
-
-.contact__card-title, .contact__card-data {
-  font-size: .813rem;
+  font-size: .875rem;
 }
 
 .contact__card-icon {
+  transition: fill 0.3s;
   font-size: 2rem;
-  color: var(--title-color);
   margin-bottom: .25rem;
+}
+
+.contact__button-icon {
+  fill: #FDD441;
+  font-size: 0.8rem;
+  transition: .4s;
 }
 
 /* Footer */
