@@ -514,6 +514,7 @@ nav ul li a:hover {
 }
 
 .home__section > h1 {
+  transition: color 2.8s;
   margin-top: 15px;
   font-size: 3em;
 }
@@ -570,6 +571,7 @@ nav ul li a:hover {
   background-color: #313131;
   padding: 1.5rem;
   border-radius: 1.25rem;
+  transition: .3s;
 }
 
 .skills__title {
@@ -610,6 +612,7 @@ nav ul li a:hover {
 /* Contact section */
 
 .contact__title {
+  transition: color 2.8s;
   text-align: center;
   font-size: 1rem;
   margin-bottom: 1.5rem;
