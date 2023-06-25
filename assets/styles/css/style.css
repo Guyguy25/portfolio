@@ -721,6 +721,12 @@ nav ul li a:hover {
   fill: #FDD441;
   font-size: 0.8rem;
   transition: .4s;
+  position: relative;
+  top: 1px;
+}
+
+.contact__button:hover > .contact__button-icon {
+  transform: translateX(.25rem);
 }
 
 /* Footer */
