@@ -21,6 +21,31 @@ skills_section_h1 = document.querySelector("#skills > .section__title")
 contact_section = document.getElementById('contact')
 contact_section_h1 = document.querySelector("#contact > .section__title")
 
+contact_form_tag1 = document.querySelectorAll(".contact__form-tag")[0]
+contact_form_tag2 = document.querySelectorAll(".contact__form-tag")[2]
+
+contact_form_input1 = document.querySelectorAll('.contact__form-input')[0]
+contact_form_input2 = document.querySelectorAll('.contact__form-input')[1]
+contact_form_input3 = document.querySelectorAll('.contact__form-input')[2]
+
+contact_title1 = document.querySelectorAll(".contact__title")[0]
+contact_title2 = document.querySelectorAll(".contact__title")[1]
+
+skills_level1 = document.querySelectorAll(".skills__level")[0]
+skills_level2 = document.querySelectorAll(".skills__level")[1]
+skills_level3 = document.querySelectorAll(".skills__level")[2]
+skills_level4 = document.querySelectorAll(".skills__level")[3]
+skills_level5 = document.querySelectorAll(".skills__level")[4]
+skills_level6 = document.querySelectorAll(".skills__level")[5]
+skills_level7 = document.querySelectorAll(".skills__level")[6]
+skills_level8 = document.querySelectorAll(".skills__level")[7]
+skills_level9 = document.querySelectorAll(".skills__level")[8]
+skills_level10 = document.querySelectorAll(".skills__level")[9]
+skills_level11 = document.querySelectorAll(".skills__level")[10]
+
+skills_title1 = document.querySelectorAll(".skills__title")[0]
+skills_title2 = document.querySelectorAll(".skills__title")[1]
+
 dev_status = document.querySelector("#home > p")
 
 main = document.querySelector(".all")
@@ -176,10 +201,34 @@ if (!localStorage.getItem("languages")) {
   langues.classList.value = "langues en"
 } else {
   if (localStorage.getItem("languages") == "fr") {
-    dev_status.innerHTML = "developpeur front-end"
+    dev_status.innerHTML = "développeur front-end"
     about_section_h1.innerHTML = "À propos"
     skills_section_h1.innerHTML = "Compétences"
     contact_section_h1.innerHTML = "Contacter"
+    contact_form_tag1.innerHTML = "Noms"
+    contact_form_tag2.innerHTML = "Projet"
+    contact_form_input1.placeholder = "Inserez votre nom"
+    contact_form_input2.placeholder = "Inserez votre mail"
+    contact_form_input3.placeholder = "Écrivez votre projet"
+    contact_title1.innerHTML = "Où vous pouvez me trouver"
+    contact_title2.innerHTML = "Vous avez un projet ?"
+
+    /* Skills section French Traduction*/
+
+    skills_title1.innerHTML = "Frontend développeur"
+    skills_title2.innerHTML = "Backend développeur"
+
+    skills_level1.innerHTML = "Avancé"
+    skills_level2.innerHTML = "Intermédiaire"
+    skills_level3.innerHTML = "Intermédiaire"
+    skills_level4.innerHTML = "Intermédiaire"
+    skills_level5.innerHTML = "Intermédiaire"
+    skills_level6.innerHTML = "Basique"
+    skills_level7.innerHTML = "Basique"
+    skills_level8.innerHTML = "Intermédiaire"
+    skills_level9.innerHTML = "Basique"
+    skills_level10.innerHTML = "Basique"
+    skills_level11.innerHTML = "Intermédiaire"
 
     /* Nav French Traduction */
     home_a.innerHTML = "Accueil"
@@ -192,6 +241,30 @@ if (!localStorage.getItem("languages")) {
     about_section_h1.innerHTML = "About"
     skills_section_h1.innerHTML = "Skills"
     contact_section_h1.innerHTML = "Contact"
+    contact_form_tag1.innerHTML = "Names"
+    contact_form_tag2.innerHTML = "Project"
+    contact_form_input1.placeholder = "Insert your name"
+    contact_form_input2.placeholder = "Insert your mail"
+    contact_form_input3.placeholder = "Write your project"
+    contact_title1.innerHTML = "Where you can find me"
+    contact_title2.innerHTML = "Have a project ?"
+
+    /* Skills section English Traduction*/
+
+    skills_title1.innerHTML = "Frontend developer"
+    skills_title2.innerHTML = "Backend developer"
+
+    skills_level1.innerHTML = "Advanced"
+    skills_level2.innerHTML = "Intermediate"
+    skills_level3.innerHTML = "Intermediate"
+    skills_level4.innerHTML = "Intermediate"
+    skills_level5.innerHTML = "Intermediate"
+    skills_level6.innerHTML = "Basic"
+    skills_level7.innerHTML = "Basic"
+    skills_level8.innerHTML = "Intermediate"
+    skills_level9.innerHTML = "Basic"
+    skills_level10.innerHTML = "Basic"
+    skills_level11.innerHTML = "Intermediate"
 
     /* Nav English Traduction */
     home_a.innerHTML = "Home"

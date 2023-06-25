@@ -219,6 +219,11 @@ html.light > body > .all > main > .contact__section > .contact__container > .con
   color: #525760;
 }
 
+html.light > body > .all > main > .skills__section > .skills__container > .skills__content {
+  box-shadow: 0 2px 16px hsla(219, 48%, 8%, .1);
+  background-color: white;
+}
+
 /* Style nav */
 
 nav {
@@ -481,6 +486,8 @@ nav ul li a:hover {
 }
 
 .section__title {
+  color:#FDD441;
+  font-size: 1.8rem;
   margin-bottom: 3.5rem;
   text-align: center;
 }
@@ -544,6 +551,60 @@ nav ul li a:hover {
   margin-top: 6rem;
   width: calc(100% - 60%);
   max-width: 1000px;
+}
+
+/* Skills section */
+
+.badge-check {
+  fill: #FDD441;
+  height: 18px;
+  width: 18px;
+}
+
+.skills__container {
+  row-gap: 2rem;
+  padding-top: 1rem;
+}
+
+.skills__content {
+  background-color: #313131;
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+}
+
+.skills__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #FDD441;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.skills__box {
+  display: flex;
+  justify-content: center;
+  column-gap: 2.5rem;
+}
+
+.skills__group {
+  display: grid;
+  align-content: flex-start;
+  row-gap: 1rem;
+}
+
+.skills__data {
+  display: flex;
+  column-gap: 0.5rem;
+}
+
+.skills__name {
+  font-size: 1rem;
+  font-weight: 500s;
+  line-height: 18px;
+}
+
+.skills__level {
+  font-size: .650rem;
 }
 
 /* Contact section */
@@ -1033,8 +1094,12 @@ nav ul li a:hover {
 
 @media (min-width: 992px) {
   .container {
-      margin-left: auto;
-      margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .skills__container {
+    grid-template-columns: repeat(2,350px);
+    column-gap: 3rem;
   }
 }
 
@@ -1042,6 +1107,14 @@ nav ul li a:hover {
   .contact__form {
     width: 360px;
     margin: 0 auto;
+  }
+
+  .skills__container {
+    justify-content: center;
+  }
+
+  .skills__content {
+    padding: 2rem 4rem;
   }
 }
 
