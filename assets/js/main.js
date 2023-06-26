@@ -62,6 +62,24 @@ const sr = ScrollReveal({
 sr.reveal(`.home__section`)
 sr.reveal(`.links`, {delay:800, origin:'bottom'})
 
+const sections = document.querySelectorAll('.section')
+
+main.addEventListener('scroll', checkSections)
+
+checkSections()
+
+function checkSections() {
+  const triggerBottom = window.innerHeight / 5 * 4
+
+  sections.forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top
+
+    if(sectionTop < triggerBottom) {
+      section.classList.add('show');
+    }
+  })
+}
+
 // Scroll Système
 
 if(main.scrollTop == 0 && !home_a.classList.contains("active")) {

@@ -477,6 +477,19 @@ nav ul li a:hover {
 
 /* Section */
 
+.section {
+  transform: translateX(400%);
+  transition: transform 0.8s ease;
+}
+
+.section:nth-of-type(even){
+  transform: translateX(-400%);
+}
+
+.section.show {
+  transform: translateX(0);
+}
+
 .about__section, .skills__section {
   padding: 9rem 0 0;
 }
