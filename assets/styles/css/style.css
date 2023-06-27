@@ -19,7 +19,7 @@ button {
 html,
 body, button, input, textarea {
   font-size: 0.938rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
   transition: background 0.3s ease-in-out;
   height: 100%;
   margin: 0px;
@@ -226,8 +226,13 @@ html.light > body > .all > main > .skills__section > .skills__container > .skill
 
 /* Style nav */
 
+@font-face {
+  font-family: 'Franklin Gothic Medium Download';
+  src: url('../../fonts/FRADM.TTF') format('truetype')
+}
+
 nav {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family:'Franklin Gothic Medium Download', sans-serif;
   position: fixed;
   transition: .3s ease-in-out;
   height: 80px;
