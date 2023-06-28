@@ -27,6 +27,8 @@ Interested in my codes ? -> Views source in https://github.com/guyguy25/portfoli
     <link rel="stylesheet" href="assets/styles/css/style.css" />
     <link rel="icon" type="image/png" href="assets/img/yellow.png" />
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-firestore-compat.js"></script>
     <title>Portfolio - Guyguy</title>
   </head>
   <body>
@@ -240,18 +242,18 @@ Interested in my codes ? -> Views source in https://github.com/guyguy25/portfoli
             </div>
             <div class="contact__content">
               <h3 class="contact__title">Have a project ?</h3>
-              <form action class="contact__form">
+              <form action class="contact__form" id="contact__form">
                 <div class="contact__form-div">
                   <label for class="contact__form-tag">Names</label>
-                  <input type="text" placeholder="Insert your name" class="contact__form-input">
+                  <input id="name_form" type="text" placeholder="Insert your name" class="contact__form-input">
                 </div>
                 <div class="contact__form-div">
                   <label for class="contact__form-tag">Mail</label>
-                  <input type="email" placeholder="Insert your mail" class="contact__form-input">
+                  <input id="email_form" type="email" placeholder="Insert your mail" class="contact__form-input">
                 </div>
                 <div class="contact__form-div contact__form-area">
                   <label for class="contact__form-tag">Project</label>
-                  <textarea name id cols="30" rows="10" placeholder="Write your project" class="contact__form-input"></textarea>
+                  <textarea id="project_form" name id cols="30" rows="10" placeholder="Write your project" class="contact__form-input"></textarea>
                 </div>
                 <button class="button">Send Message</button>
               </form>
@@ -278,5 +280,6 @@ Interested in my codes ? -> Views source in https://github.com/guyguy25/portfoli
     </section>
 
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/db.js"></script>
   </body>
 </html>
