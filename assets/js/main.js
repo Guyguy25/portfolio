@@ -300,3 +300,19 @@ document.querySelector("#nav-icon").addEventListener("click", function () {
   document.querySelector("#nav-icon").classList.toggle("open")
   document.querySelector(".overlay").classList.toggle("open")
 })
+
+// Close Alert
+
+document.getElementById("close__success").addEventListener("click", function() {
+  const alert_success = document.getElementById("alert__success");
+
+  alert_success.style.animation = "close_alert .3s linear";
+  setTimeout(() => {  alert_success.style.display = "none"; alert_success.style.animation = "open_alert .3s linear"; }, 300);
+})
+
+document.getElementById("close__danger").addEventListener("click", function() {
+  const alert_danger = document.getElementById("alert__danger");
+
+  alert_danger.style.animation = "close_alert .3s linear";
+  setTimeout(() => {  alert_danger.style.display = "none"; alert_danger.style.animation = "open_alert .3s linear"; }, 300);
+})
