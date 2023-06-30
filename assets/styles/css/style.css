@@ -664,7 +664,7 @@ nav ul li a:hover {
 .contact__form .contact__form-div .contact__form-input:focus:hover {
   border:2px solid #FDD441;
 }
-.contact__form .contact__form-div .contact__form-input:focus ~ .contact__form-tag, .contact__form .contact__form-div .contact__form-input:valid ~ .contact__form-tag {
+.contact__form .contact__form-div .contact__form-input:focus ~ .contact__form-tag {
   padding: 0 4px;
   top: -10px;
   background: #fff;
