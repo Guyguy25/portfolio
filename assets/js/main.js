@@ -230,7 +230,7 @@ if (!localStorage.getItem("languages")) {
     /* Alert-box french traduction */
 
     alert_danger_text.innerHTML = " Tous les champs doivent être remplis"
-    alert_success_text.innerHTML = " Votre message a été envoyé avec succès"
+    alert_success_text.innerHTML = " Message envoyé avec succès."
 
     /* Skills section French Traduction*/
 
