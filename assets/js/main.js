@@ -24,10 +24,6 @@ contact_section_h1 = document.querySelector("#contact > .section__title")
 contact_form_tag1 = document.querySelectorAll(".contact__form-tag")[0]
 contact_form_tag2 = document.querySelectorAll(".contact__form-tag")[2]
 
-contact_form_input1 = document.querySelectorAll('.contact__form-input')[0]
-contact_form_input2 = document.querySelectorAll('.contact__form-input')[1]
-contact_form_input3 = document.querySelectorAll('.contact__form-input')[2]
-
 contact_title1 = document.querySelectorAll(".contact__title")[0]
 contact_title2 = document.querySelectorAll(".contact__title")[1]
 
@@ -225,9 +221,6 @@ if (!localStorage.getItem("languages")) {
     contact_section_h1.innerHTML = "Contacter"
     contact_form_tag1.innerHTML = "Noms"
     contact_form_tag2.innerHTML = "Projet"
-    // contact_form_input1.placeholder = "Inserez votre nom"
-    // contact_form_input2.placeholder = "Inserez votre mail"
-    // contact_form_input3.placeholder = "Écrivez votre projet"
     contact_title1.innerHTML = "Où vous pouvez me trouver"
     contact_title2.innerHTML = "Vous avez un projet ?"
 
@@ -261,9 +254,6 @@ if (!localStorage.getItem("languages")) {
     contact_section_h1.innerHTML = "Contact"
     contact_form_tag1.innerHTML = "Names"
     contact_form_tag2.innerHTML = "Project"
-    // contact_form_input1.placeholder = "Insert your name"
-    // contact_form_input2.placeholder = "Insert your mail"
-    // contact_form_input3.placeholder = "Write your project"
     contact_title1.innerHTML = "Where you can find me"
     contact_title2.innerHTML = "Have a project ?"
 
