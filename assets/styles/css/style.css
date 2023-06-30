@@ -46,11 +46,6 @@ body, button, input, textarea {
   border-radius: 10px;
 }
 
-::-webkit-scrollbar-corner {
-  border-radius: 10px;
-  background: lightblue;
-}
-
 ::-webkit-scrollbar-track {
   margin-top: 80px;
 }
@@ -59,7 +54,6 @@ body, button, input, textarea {
 
 html.dark > body {
   background-color: #121212;
-  /* background-color: #1A1D1E; */
   color: white;
 }
 
@@ -217,6 +211,26 @@ html.light > body > .all > main > .contact__section > .contact__container > .con
 
 html.light > body > .all > main > .contact__section > .contact__container > .contact__content > .contact__info > .contact__card > .contact__card-data {
   color: #525760;
+}
+
+html.light > body > .all > main > .contact__section > .contact__container > .contact__content > .contact__form > .contact__form-div > .contact__form-input {
+  color: rgb(36, 36, 36);
+}
+
+html.light > body > .all > main > .contact__section > .contact__container > .contact__content > .contact__form > .contact__form-div > .contact__form-input:hover {
+  border: 1px solid rgb(0, 0, 0);
+}
+
+html.light > body > .all > main > .contact__section > .contact__container > .contact__content > .contact__form > .contact__form-div > .contact__form-input:focus:hover {
+  border: 2px solid #FDD441;
+}
+
+html.light > body > .all > main > .contact__section > .contact__container > .contact__content > .contact__form > .contact__form-div > .contact__form-tag {
+  color: rgb(128, 126, 126);
+}
+
+html.light > body > .all > main > .contact__section > .contact__container > .contact__content > .contact__form > .contact__form-div > .contact__form-input:focus ~ .contact__form-tag {
+  color: #FDD441;
 }
 
 html.light > body > .all > main > .skills__section > .skills__container > .skills__content {
@@ -664,6 +678,7 @@ nav ul li a:hover {
 .contact__form .contact__form-div .contact__form-input:focus:hover {
   border:2px solid #FDD441;
 }
+
 .contact__form .contact__form-div .contact__form-input:focus ~ .contact__form-tag {
   padding: 0 4px;
   top: -10px;
@@ -671,6 +686,11 @@ nav ul li a:hover {
   font-size: 14px;
   color: #FDD441;
 }
+
+.label-change {
+  padding: 0 4px;
+}
+
 .contact__form .contact__form-div .contact__form-input:hover {
   border:1px solid rgba(189, 189, 189, 0.87)
 }
@@ -681,7 +701,7 @@ nav ul li a:hover {
   left: 18px;
   pointer-events: none;
   color: #bdbdbd80;
-  transition: all 0.2s ease-in-out;
+  transition: top 0.2s, left 0.2s, background-color .3s ease-in-out;
 }
 
 .contact__form-area textarea {
@@ -947,6 +967,10 @@ nav ul li a:hover {
 }
 
 @media (max-width: 1095px) {
+  ::-webkit-scrollbar-track {
+    margin-top: 65px;
+  }
+
   html.dark > body > header > nav > ul > .languages > .langues,
   html.light > body > header > nav > ul > .languages > .langues {
     background: none;

@@ -42,6 +42,9 @@ skills_level11 = document.querySelectorAll(".skills__level")[10]
 skills_title1 = document.querySelectorAll(".skills__title")[0]
 skills_title2 = document.querySelectorAll(".skills__title")[1]
 
+alert_success_text = document.querySelectorAll("#alert-box_text")[0]
+alert_danger_text = document.querySelectorAll("#alert-box_text")[1]
+
 dev_status = document.querySelector("#home > p")
 
 main = document.querySelector(".all")
@@ -219,10 +222,15 @@ if (!localStorage.getItem("languages")) {
     about_section_h1.innerHTML = "À propos"
     skills_section_h1.innerHTML = "Compétences"
     contact_section_h1.innerHTML = "Contacter"
-    contact_form_tag1.innerHTML = "Noms"
+    contact_form_tag1.innerHTML = "Nom"
     contact_form_tag2.innerHTML = "Projet"
     contact_title1.innerHTML = "Où vous pouvez me trouver"
     contact_title2.innerHTML = "Vous avez un projet ?"
+
+    /* Alert-box french traduction */
+
+    alert_danger_text.innerHTML = " Tous les champs doivent être remplis"
+    alert_success_text.innerHTML = " Votre message a été envoyé avec succès"
 
     /* Skills section French Traduction*/
 
@@ -252,7 +260,7 @@ if (!localStorage.getItem("languages")) {
     about_section_h1.innerHTML = "About"
     skills_section_h1.innerHTML = "Skills"
     contact_section_h1.innerHTML = "Contact"
-    contact_form_tag1.innerHTML = "Names"
+    contact_form_tag1.innerHTML = "Name"
     contact_form_tag2.innerHTML = "Project"
     contact_title1.innerHTML = "Where you can find me"
     contact_title2.innerHTML = "Have a project ?"
@@ -306,3 +314,17 @@ document.getElementById("close__danger").addEventListener("click", function() {
   alert_danger.style.animation = "close_alert .3s linear";
   setTimeout(() => {  alert_danger.style.display = "none"; alert_danger.style.animation = "open_alert .3s linear"; }, 300);
 })
+
+// Input OnChange
+
+function changeLabel(input) {
+  var label = input.nextElementSibling;
+
+  if (input.value !== "") {
+    label.classList.add("label-change");
+    label.style.top = "-10px"
+  } else {
+    label.classList.remove("label-change");
+    label.style.top = ""
+  }
+}
