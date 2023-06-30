@@ -267,16 +267,16 @@ Interested in my codes ? -> Views source in https://github.com/guyguy25/portfoli
 
               <form action class="contact__form" id="contact__form">
                 <div class="contact__form-div">
-                  <label for class="contact__form-tag">Names</label>
-                  <input id="name_form" type="text" placeholder="Insert your name" class="contact__form-input">
+                  <input id="name_form" type="text" class="contact__form-input" required>
+                  <label class="contact__form-tag">Name</label>
                 </div>
                 <div class="contact__form-div">
-                  <label for class="contact__form-tag">Mail</label>
-                  <input id="email_form" type="email" placeholder="Insert your mail" class="contact__form-input">
+                  <input id="email_form" type="email" class="contact__form-input" required>
+                  <label class="contact__form-tag">Mail</label>
                 </div>
                 <div class="contact__form-div contact__form-area">
-                  <label for class="contact__form-tag">Project</label>
-                  <textarea id="project_form" name id cols="30" rows="10" placeholder="Write your project" class="contact__form-input"></textarea>
+                  <textarea id="project_form" type="text" cols="30" rows="10" class="contact__form-input" required></textarea>
+                  <label class="contact__form-tag">Project</label>
                 </div>
                 <button class="button">Send Message</button>
               </form>
