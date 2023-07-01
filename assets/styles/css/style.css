@@ -594,6 +594,10 @@ nav ul li a:hover {
   width: 750px;
 }
 
+.about__data {
+  width: 700px;
+}
+
 .input__slider {
   display: none;
 }
@@ -1373,8 +1377,12 @@ nav ul li a:hover {
     width: 70%;
   }
 
+  .about__container.grid {
+    gap: 3rem;
+  }
+
   .about__data {
-    margin-bottom: 50px;
+    width: 600px;
   }
 
   .card__container {
@@ -1409,6 +1417,12 @@ nav ul li a:hover {
   .footer__social > a > svg {
     height: 16px;
     width: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .about__data {
+    width: unset;
   }
 }
 
