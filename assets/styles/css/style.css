@@ -594,8 +594,20 @@ nav ul li a:hover {
   width: 750px;
 }
 
+.about__container.grid {
+  gap: 3rem;
+}
+
 .about__data {
-  width: 700px;
+  display: flex;
+  width: 775px;
+  height: 357px;
+}
+
+.about__data > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .input__slider {
@@ -609,13 +621,12 @@ nav ul li a:hover {
   max-height: 600px;
   transform-style: preserve-3d;
   flex-direction: column;
-  margin-bottom: 100px;
 }
 
 .cards {
   position: relative;
-  height: 417px;
-  width: 267px;
+  height: 357px;
+  width: 229px;
   margin-bottom: 20px;
   perspective: 1000px;
   transform-style: preserve-3d;
@@ -623,7 +634,7 @@ nav ul li a:hover {
 
 .cards > label {
   position: absolute;
-  width: 267px;
+  width: 229px;
   height: 100%;
   left: 0;
   right: 0;
@@ -1381,10 +1392,6 @@ nav ul li a:hover {
     gap: 3rem;
   }
 
-  .about__data {
-    width: 600px;
-  }
-
   .card__container {
     margin-bottom: 0px;
   }
@@ -1422,7 +1429,12 @@ nav ul li a:hover {
 
 @media (max-width: 992px) {
   .about__data {
+    height: unset;
     width: unset;
+  }
+
+  .about__container.grid {
+    gap: 4rem;
   }
 }
 
@@ -1435,6 +1447,11 @@ nav ul li a:hover {
   .cards > label {
     height: 313px;
     width: 200px;
+  }
+
+  .card__button {
+    height: 2.5rem;
+    font-size: 14.5px;
   }
 }
 
