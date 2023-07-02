@@ -27,23 +27,22 @@ contact_form_tag2 = document.querySelectorAll(".contact__form-tag")[2]
 contact_title1 = document.querySelectorAll(".contact__title")[0]
 contact_title2 = document.querySelectorAll(".contact__title")[1]
 
-skills_level1 = document.querySelectorAll(".skills__level")[0]
-skills_level2 = document.querySelectorAll(".skills__level")[1]
-skills_level3 = document.querySelectorAll(".skills__level")[2]
-skills_level4 = document.querySelectorAll(".skills__level")[3]
-skills_level5 = document.querySelectorAll(".skills__level")[4]
-skills_level6 = document.querySelectorAll(".skills__level")[5]
-skills_level7 = document.querySelectorAll(".skills__level")[6]
-skills_level8 = document.querySelectorAll(".skills__level")[7]
-skills_level9 = document.querySelectorAll(".skills__level")[8]
-skills_level10 = document.querySelectorAll(".skills__level")[9]
-skills_level11 = document.querySelectorAll(".skills__level")[10]
+skills_level = document.querySelectorAll(".skills__level")
 
 skills_title1 = document.querySelectorAll(".skills__title")[0]
 skills_title2 = document.querySelectorAll(".skills__title")[1]
 
 alert_success_text = document.querySelectorAll("#alert-box_text")[0]
 alert_danger_text = document.querySelectorAll("#alert-box_text")[1]
+
+about__data = document.querySelector(".about__data > p")
+card__button = document.querySelectorAll(".card__button")
+
+card__descriptionKoios = document.querySelectorAll(".card__description")[0]
+card__descriptionFinary = document.querySelectorAll(".card__description")[1]
+card__descriptionDeemer = document.querySelectorAll(".card__description")[2]
+
+contact__button = document.querySelectorAll('.contact__button > span')
 
 dev_status = document.querySelector("#home > p")
 
@@ -237,17 +236,35 @@ if (!localStorage.getItem("languages")) {
     skills_title1.innerHTML = "Frontend développeur"
     skills_title2.innerHTML = "Backend développeur"
 
-    skills_level1.innerHTML = "Avancé"
-    skills_level2.innerHTML = "Intermédiaire"
-    skills_level3.innerHTML = "Intermédiaire"
-    skills_level4.innerHTML = "Intermédiaire"
-    skills_level5.innerHTML = "Intermédiaire"
-    skills_level6.innerHTML = "Basique"
-    skills_level7.innerHTML = "Basique"
-    skills_level8.innerHTML = "Intermédiaire"
-    skills_level9.innerHTML = "Basique"
-    skills_level10.innerHTML = "Basique"
-    skills_level11.innerHTML = "Intermédiaire"
+    skills_level[0].innerHTML = "Avancé"
+    skills_level[1].innerHTML = "Intermédiaire"
+    skills_level[2].innerHTML = "Intermédiaire"
+    skills_level[3].innerHTML = "Intermédiaire"
+    skills_level[4].innerHTML = "Intermédiaire"
+    skills_level[5].innerHTML = "Basique"
+    skills_level[6].innerHTML = "Basique"
+    skills_level[7].innerHTML = "Intermédiaire"
+    skills_level[8].innerHTML = "Basique"
+    skills_level[9].innerHTML = "Basique"
+    skills_level[10].innerHTML = "Intermédiaire"
+    skills_level[11].innerHTML = "Basique"
+
+    /* About content french traduction */
+
+    about__data.innerHTML = "Je m'appelle Tanguy, connu sous le pseudonyme Guyguy sur les réseaux sociaux. Je suis un jeune développeur frontend avec une solide expérience sur de nombreux projets. En tant qu'indépendant, je suis réactif et réponds rapidement aux propositions qui me sont faites. Mon approche du travail est axée sur la qualité et l'efficacité, ce qui me permet de livrer rapidement des résultats de haut niveau."
+    card__descriptionKoios.innerHTML = "Site de gestion de piste de ski"
+    card__descriptionFinary.innerHTML = "Site vitrine pour un serveur discord"
+    card__descriptionDeemer.innerHTML = "Site vitrine pour un bot discord"
+
+    card__button.forEach((element) => {
+      element.innerHTML = "Voir plus"
+    });
+
+    /* Contact content french traduction */
+
+    contact__button.forEach((element) => {
+      element.innerHTML = "Écrivez-moi"
+    });
 
     /* Nav French Traduction */
     home_a.innerHTML = "Accueil"
@@ -270,17 +287,35 @@ if (!localStorage.getItem("languages")) {
     skills_title1.innerHTML = "Frontend developer"
     skills_title2.innerHTML = "Backend developer"
 
-    skills_level1.innerHTML = "Advanced"
-    skills_level2.innerHTML = "Intermediate"
-    skills_level3.innerHTML = "Intermediate"
-    skills_level4.innerHTML = "Intermediate"
-    skills_level5.innerHTML = "Intermediate"
-    skills_level6.innerHTML = "Basic"
-    skills_level7.innerHTML = "Basic"
-    skills_level8.innerHTML = "Intermediate"
-    skills_level9.innerHTML = "Basic"
-    skills_level10.innerHTML = "Basic"
-    skills_level11.innerHTML = "Intermediate"
+    skills_level[0].innerHTML = "Advanced"
+    skills_level[1].innerHTML = "Intermediate"
+    skills_level[2].innerHTML = "Intermediate"
+    skills_level[3].innerHTML = "Intermediate"
+    skills_level[4].innerHTML = "Intermediate"
+    skills_level[5].innerHTML = "Basic"
+    skills_level[6].innerHTML = "Basic"
+    skills_level[7].innerHTML = "Intermediate"
+    skills_level[8].innerHTML = "Basic"
+    skills_level[9].innerHTML = "Basic"
+    skills_level[10].innerHTML = "Intermediate"
+    skills_level[11].innerHTML = "Basic"
+
+    /* About content English Traduction */
+
+    about__data.innerHTML = "My name is Tanguy, known by the pseudonym Guyguy on social media. I am a young frontend developer with a solid experience on various projects. As an independent contractor, I am responsive and quickly respond to offers that are made to me. My approach to work is focused on quality and efficiency, allowing me to deliver high-level results quickly."
+    card__descriptionKoios.innerHTML = "Website for ski slope management"
+    card__descriptionFinary.innerHTML = "Showcase website for a Discord server"
+    card__descriptionDeemer.innerHTML = "Showcase website for a Discord bot"
+
+    card__button.forEach((element) => {
+      element.innerHTML = "See more"
+    });
+
+    /* Contact content english traduction */
+
+    contact__button.forEach((element) => {
+      element.textContent = "Write me"
+    });
 
     /* Nav English Traduction */
     home_a.innerHTML = "Home"
